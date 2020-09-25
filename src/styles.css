@@ -1,1 +1,72 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+
+/*  Config Gerais */
+* {
+  Margin: 0;
+  Padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+/* Grid */
+
+
+.container {
+  max-width: 1580px;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.flex-item-4, .flex-item-3, .flex-item-5 .flex-item-6, flex-item-8, .flex-item-10, .flex-item-12 {
+  align-self: flex-start;
+  flex-wrap: wrap;
+}
+
+.flex-item-3 {
+  flex:  0 0 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+}
+
+.flex-item-4 {
+  flex:  0 0 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+}
+
+
+.flex-item-6 {
+  flex:  0 0 calc(50% - 20px);
+  max-width: calc(50% - 20px);
+}
+
+.flex-item-8 {
+  flex:  0 0 calc(66.666% - 20px);
+  max-width: calc(66.666% - 20px);
+}
+
+.flex-item-10 {
+  flex:  0 0 calc(83.333% - 20px);
+  max-width: calc(83.333% - 20px);
+}
+
+.flex-item-12 {
+  flex:  0 0 calc(100% - 20px);
+  max-width: calc(100% - 20px);
+}
+
+
+
+@media (max-width: 1229){
+  .container {
+    max-width: 400px;
+    flex-direction: column;
+  }
+
+  .flex-item-4, .flex-item-3, .flex-item-5 .flex-item-6, flex-item-8, .flex-item-10, .flex-item-12 {
+    align-self: flex-start;
+    flex-wrap: wrap;
+  }
+}
