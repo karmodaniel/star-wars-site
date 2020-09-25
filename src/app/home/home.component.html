@@ -1,34 +1,36 @@
 <header class="header">
   <div class="container">
-    <a href="#" class="header_logo">
+    <a href="#" class="header_logo flex-item-2">
       <img
         src="../../assets/home/star-wars-logo1.svg"
         alt="Star Wars Forever logo"
       />
     </a>
 
-    <nav class="header_menu">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Filmes</a></li>
-        <li><a href="#">Personagens</a></li>
-        <li><a href="#">Planetas</a></li>
-        <li><a href="#">Naves</a></li>
-      </ul>
-    </nav>
+    <div class="nav flex-item-10 item">
+      <nav class="header_menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Filmes</a></li>
+          <li><a href="#">Personagens</a></li>
+          <li><a href="#">Planetas</a></li>
+          <li><a href="#">Naves</a></li>
+        </ul>
+      </nav>
 
-    <form class="form">
-      <input type="search" />
-      <button class="btn">
-        <img src="../../assets/home/lightsaber.svg" alt="Buscar" />
-      </button>
-    </form>
+      <form class="form item">
+        <input type="search" />
+        <button class="btn">
+          <img src="../../assets/home/lightsaber.svg" alt="Buscar" />
+        </button>
+      </form>
+    </div>
   </div>
 </header>
 
 <!-- PLANETAS -->
 <section class="planetas">
-  <div class="container-planetas">
+  <div class="container">
     <div class="planeta-info">
       <h1>Coruscant</h1>
       <p>
@@ -45,10 +47,10 @@
 
 <!-- PERSONAGENS -->
 <section class="personagens">
-  <div class="container-personagens">
+  <div class="container">
     <h1>Personagens</h1>
     <div class="itens">
-      <mat-card class="card perso-1">
+      <mat-card class="card flex-item-4">
         <mat-card-header>
           <mat-card-title>Luke Skywalker</mat-card-title>
         </mat-card-header>
@@ -74,7 +76,7 @@
         </mat-card-content>
       </mat-card>
 
-      <mat-card class="card perso-2">
+      <mat-card class="card flex-item-4">
         <div class="content">
           <mat-card-header>
             <mat-card-title>Darth Vader</mat-card-title>
@@ -105,7 +107,7 @@
         </div>
       </mat-card>
 
-      <mat-card class="card perso-3">
+      <mat-card class="card flex-item-4">
         <div class="content">
           <mat-card-header>
             <mat-card-title>C3P0</mat-card-title>
@@ -142,7 +144,7 @@
 <!-- NAVES -->
 
 <section class="naves">
-  <div class="container-naves">
+  <div class="container">
     <h1>NAVES</h1>
     <img
       class="badge"
@@ -153,10 +155,10 @@
     <mat-tab-group mat-align-tabs="start" class="flex-item-12">
       <mat-tab label="REBELIÃO">
         <div class="naves-content">
-          <span class="nave flex-item-6">
+          <span class="nave">
             <img src="../../assets/home/x-wing.png" alt="Nave X-Windg" />
           </span>
-          <div class="info flex-item-6">
+          <div class="info">
             <h2>X-Wing</h2>
 
             <p>
@@ -202,7 +204,7 @@
           </div>
         </div>
       </mat-tab>
-      <a href=""><mat-tab label="TODAS AS NAVES"></mat-tab></a>
+      <mat-tab label="TODAS AS NAVES"></mat-tab>
     </mat-tab-group>
   </div>
 </section>
@@ -294,13 +296,21 @@
       alt="Frase May the force be always with you"
     />
   </div>
+  <div class="slogan-mobile">
+    <img
+      src="../../assets/home/slogan-mobile.png"
+      alt="Frase May the force be always with you"
+    />
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container">
-    <p class="flex-item-6">Todos os direitos reservados. Star Wars Forever 2020</p>
-    <div class="redes flex-item-3">
+    <p class="flex-item-8">
+      Todos os direitos reservados. Star Wars Forever 2020.
+    </p>
+    <div class="redes flex-item-4">
       <h3>Conheça nossas redes</h3>
       <ul>
         <li>
@@ -319,12 +329,6 @@
           /></a>
         </li>
       </ul>
-    </div>
-    <div class="estrela">
-      <img
-        src="../../assets/home/estrela-da-morte.svg"
-        alt="Estrela da morte"
-      />
     </div>
   </div>
 </footer>
