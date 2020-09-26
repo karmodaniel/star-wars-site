@@ -9,7 +9,7 @@ import { ApiStarWarsService } from '../api-star-wars.service';
 export class PersonagensComponent implements OnInit {
   constructor(private apiStarWars: ApiStarWarsService) {}
 
-  personagens: Array<any> = new Array;
+  personagens: Array<any> = new Array();
   isActivate: Boolean = false;
   id: Number;
   imagens = [
@@ -22,21 +22,22 @@ export class PersonagensComponent implements OnInit {
     '../../assets/personagens/img-personagens/beru-whitesun.png',
     '../../assets/personagens/img-personagens/r5-d4.png',
     '../../assets/personagens/img-personagens/biggs-darklighter.png',
-    '../../assets/personagens/img-personagens/obi-wan-kenobi.png'
-
+    '../../assets/personagens/img-personagens/obi-wan-kenobi.png',
   ];
 
   ngOnInit() {
-    this.updatePersonagens(this.imagens);
+    this.fetchData();
   }
 
-  
-
-  updatePersonagens(value) {
+  fetchData() {
+    let cont = 0;
     this.apiStarWars.getPersonagens().subscribe(
       (personagem) => {
         this.personagens = personagem.results;
-        this.addImagens(value);
+        for (let pers of this.personagens) {
+          pers.img = this.imagens[cont];
+          cont++;
+        }
         console.log(this.personagens);
       },
       (err) => {
@@ -45,21 +46,10 @@ export class PersonagensComponent implements OnInit {
     );
   }
 
-  addImagens(imagem) {
-    let cont = 0;
-    for (let pers of this.personagens) {
-      pers.img = imagem[cont];
-      cont++;
-    }
-  }
-
   getId(index) {
     this.id = index;
     this.isActivate = true;
     console.log(this.isActivate);
     console.log(this.id);
   }
-
-
-  
 }
