@@ -13,12 +13,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { PersonagensComponent } from './personagens/personagens.component';
 import { ApiStarWarsService } from './api-star-wars.service';
+import { PersonagemDialogComponent } from './personagem-dialog/personagem-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PersonagensComponent
+    PersonagensComponent,
+    PersonagemDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,10 +31,10 @@ import { ApiStarWarsService } from './api-star-wars.service';
     MatIconModule,
     MatCardModule,
     MatTabsModule,
-    HttpClientModule
-    
+    HttpClientModule,
+    MatDialogModule,
   ],
   providers: [ApiStarWarsService, HttpClientModule],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

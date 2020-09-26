@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiStarWarsService } from '../api-star-wars.service';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { PersonagemDialogComponent } from '../personagem-dialog/personagem-dialog.component';
 
 @Component({
   selector: 'app-personagens',
@@ -7,11 +9,12 @@ import { ApiStarWarsService } from '../api-star-wars.service';
   styleUrls: ['./personagens.component.css'],
 })
 export class PersonagensComponent implements OnInit {
-  constructor(private apiStarWars: ApiStarWarsService) {}
+  constructor(
+    private apiStarWars: ApiStarWarsService,
+    public dialog: MatDialog
+  ) {}
 
   personagens: Array<any> = new Array();
-  isActivate: Boolean = false;
-  id: Number;
   imagens = [
     '../../assets/personagens/img-personagens/luke-skywalker.png',
     '../../assets/personagens/img-personagens/c3po.png',
@@ -46,10 +49,11 @@ export class PersonagensComponent implements OnInit {
     );
   }
 
-  getId(index) {
-    this.id = index;
-    this.isActivate = true;
-    console.log(this.isActivate);
-    console.log(this.id);
+  showDetails(personagem) {
+    this.dialog.open(PersonagemDialogComponent, {
+      data: {
+        body: personagem,
+      },
+    });
   }
 }

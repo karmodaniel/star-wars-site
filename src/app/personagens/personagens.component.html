@@ -1,128 +1,114 @@
 <header class="header">
-    <div class="container">
-      <a href="#" class="header_logo flex-item-2">
-        <img
-          src="../../assets/home/star-wars-logo1.svg"
-          alt="Star Wars Forever logo"
-        />
-      </a>
-  
-      <div class="nav flex-item-10 item">
-        <nav class="header_menu">
-          <ul>
-            <li><a href="#" class="atual">Home</a></li>
-            <li><a href="#">Filmes</a></li>
-            <li><a href="#">Personagens</a></li>
-            <li><a href="#">Planetas</a></li>
-            <li><a href="#">Naves</a></li>
-          </ul>
-        </nav>
-  
-        <form class="form item">
-          <input type="search" />
-          <button class="btn">
-            <img src="../../assets/home/lightsaber.svg" alt="Buscar" />
-          </button>
-        </form>
-      </div>
-    </div>
-  </header>
-  
-  <!--  BG-PERSONAGENS -->
-  <section class="bg-personagens">
-    <div class="container">
-      <div class="info">
-        <h1>Personagens de Star Wars</h1>
-        <p>
-            Explore os personagens da saga espacial mais amada da cultura pop.
-        </p>
-      </div>
-    </div>
-  </section>
-  
-  <!-- PERSONAGENS -->
-  <section class="personagens">
-    <div class="container">
-      <h1>Personagens em destaques</h1>
-      <div class="itens">
-
-        <mat-card *ngFor="let personagem of personagens; index as pos" class="card flex-item-3" (click)="getId(pos)">
-          <img 
-            mat-card-image
-            [attr.src]="personagem.img"
-            alt="Foto Luke Skywalker"   
-          />
-          <mat-card-content *ngIf="!isActivate">
-            <div class="tags">
-              <span class="jedi"> JEDI </span>
-              <span class="rebeliao"> REBELIÃO </span>
-            </div>
-            <h1>
-              {{personagem.name}}
-            </h1>
-          </mat-card-content>
-
-          <mat-card-content *ngIf="isActivate && pos == id">
-            <div class="tags">
-              <span class="jedi"> JEDI </span>
-              <span class="rebeliao"> REBELIÃO </span>
-            </div>
-            <h1>
-              x
-            </h1>
-          </mat-card-content>
-        </mat-card>
-        
-        
-       
-      </div>
-      
-    </div>
-  </section>
-  
-  <!-- FRASE -->
-  
-  <section class="container">
-    <div class="slogan">
+  <div class="container">
+    <a href="#" class="header_logo flex-item-2">
       <img
-        src="../../assets/home/slogan.svg"
-        alt="Frase May the force be always with you"
+        src="../../assets/home/star-wars-logo1.svg"
+        alt="Star Wars Forever logo"
       />
-    </div>
-    <div class="slogan-mobile">
-      <img
-        src="../../assets/home/slogan-mobile.png"
-        alt="Frase May the force be always with you"
-      />
-    </div>
-  </section>
-  
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <p class="flex-item-8">
-        Todos os direitos reservados. Star Wars Forever 2020.
-      </p>
-      <div class="redes flex-item-4">
-        <h3>Conheça nossas redes</h3>
+    </a>
+
+    <div class="nav flex-item-10 item">
+      <nav class="header_menu">
         <ul>
-          <li>
-            <a href="https://www.twitter.com" target="_blank">
-              <img src="../../assets/redes/twitter.png" alt="Twitter"
-            /></a>
-          </li>
-          <li>
-            <a href="https://www.facebook.com" target="_blank">
-              <img src="../../assets/redes/facebook.png" alt="Facebook"
-            /></a>
-          </li>
-          <li>
-            <a href="https://www.intagram.com" target="_blank">
-              <img src="../../assets/redes/instagram.png" alt="instagram"
-            /></a>
-          </li>
+          <li><a href="#" class="atual">Home</a></li>
+          <li><a href="#">Filmes</a></li>
+          <li><a href="#">Personagens</a></li>
+          <li><a href="#">Planetas</a></li>
+          <li><a href="#">Naves</a></li>
         </ul>
-      </div>
+      </nav>
+
+      <form class="form item">
+        <input type="search" />
+        <button class="btn">
+          <img src="../../assets/home/lightsaber.svg" alt="Buscar" />
+        </button>
+      </form>
     </div>
-  </footer>
-  
+  </div>
+</header>
+
+<!--  BG-PERSONAGENS -->
+<section class="bg-personagens">
+  <div class="container">
+    <div class="info">
+      <h1>Personagens de Star Wars</h1>
+      <p>Explore os personagens da saga espacial mais amada da cultura pop.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PERSONAGENS -->
+<section class="personagens">
+  <div class="container">
+    <h1>Personagens em destaques</h1>
+    <div class="itens">
+      <mat-card
+        *ngFor="let personagem of personagens; index as pos"
+        class="card flex-item-3"
+        (click)="showDetails(personagem)"
+      >
+        <img
+          mat-card-image
+          [attr.src]="personagem.img"
+          alt="Foto Luke Skywalker"
+        />
+        <mat-card-content>
+          <div class="tags">
+            <span class="jedi"> JEDI </span>
+            <span class="rebeliao"> REBELIÃO </span>
+          </div>
+          <h1>
+            {{ personagem.name }}
+          </h1>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</section>
+
+<!-- FRASE -->
+
+<section class="container">
+  <div class="slogan">
+    <img
+      src="../../assets/home/slogan.svg"
+      alt="Frase May the force be always with you"
+    />
+  </div>
+  <div class="slogan-mobile">
+    <img
+      src="../../assets/home/slogan-mobile.png"
+      alt="Frase May the force be always with you"
+    />
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <p class="flex-item-8">
+      Todos os direitos reservados. Star Wars Forever 2020.
+    </p>
+    <div class="redes flex-item-4">
+      <h3>Conheça nossas redes</h3>
+      <ul>
+        <li>
+          <a href="https://www.twitter.com" target="_blank">
+            <img src="../../assets/redes/twitter.png" alt="Twitter"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com" target="_blank">
+            <img src="../../assets/redes/facebook.png" alt="Facebook"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.intagram.com" target="_blank">
+            <img src="../../assets/redes/instagram.png" alt="instagram"
+          /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
