@@ -9,7 +9,7 @@ export class ApiStarWarsService {
 
   constructor(private http: HttpClient) { }
 
-  listarPersonagens (): Observable<any> {
+  getPersonagens(): Observable<any> {
     return this.http.get("https://swapi.dev/api/people");
   }
 }
