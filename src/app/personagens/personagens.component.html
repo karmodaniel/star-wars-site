@@ -11,7 +11,39 @@
 <!-- PERSONAGENS -->
 <section class="personagens">
   <div class="container">
-    <h1>Personagens em destaques</h1>
+    <!-- PERSONAGENS EM DESTAQUE -->
+    <div class="destaque">
+      <h1>Personagens em Destaque</h1>
+    </div>
+    <div class="itens">
+      <mat-card
+        *ngFor="let personagem of destaques; index as pos"
+        class="card"
+        (click)="showDetails(personagem)"
+      >
+        <img
+          mat-card-image
+          [attr.src]="personagem.img"
+          alt="Foto Luke Skywalker"
+        />
+        <mat-card-content>
+          <div class="tags">
+            <span class="jedi"> JEDI </span>
+            <span class="rebeliao"> REBELIÃO </span>
+          </div>
+          <h2>
+            {{ personagem.name }}
+          </h2>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <!-- TODOS OS PERSONAGENS -->
+    <div class="flex-item-8">
+      <h1>Lista de Personagens de Star Wars</h1>
+    </div>
+    <mat-divider class="flex-item-4"></mat-divider>
+
     <div class="itens">
       <mat-card
         *ngFor="let personagem of personagens; index as pos"
@@ -28,9 +60,9 @@
             <span class="jedi"> JEDI </span>
             <span class="rebeliao"> REBELIÃO </span>
           </div>
-          <h1>
+          <h2>
             {{ personagem.name }}
-          </h1>
+          </h2>
         </mat-card-content>
       </mat-card>
     </div>

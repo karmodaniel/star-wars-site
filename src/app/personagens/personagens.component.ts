@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { ApiStarWarsService } from '../api-star-wars.service';
-import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { PersonagemDialogComponent } from '../personagem-dialog/personagem-dialog.component';
 
 @Component({
   selector: 'app-personagens',
@@ -9,12 +8,12 @@ import { PersonagemDialogComponent } from '../personagem-dialog/personagem-dialo
   styleUrls: ['./personagens.component.css'],
 })
 export class PersonagensComponent implements OnInit {
-  constructor(
-    private apiStarWars: ApiStarWarsService,
-    public dialog: MatDialog
-  ) {}
+  constructor(private apiStarWars: ApiStarWarsService) {}
 
   personagens: Array<any> = new Array();
+  destaques: Array<any> = new Array();
+  isActivate: Boolean = false;
+  id: Number;
   imagens = [
     '../../assets/personagens/img-personagens/luke-skywalker.png',
     '../../assets/personagens/img-personagens/c3po.png',
@@ -41,6 +40,7 @@ export class PersonagensComponent implements OnInit {
           pers.img = this.imagens[cont];
           cont++;
         }
+        this.persongensDestaque();
         console.log(this.personagens);
       },
       (err) => {
@@ -49,11 +49,17 @@ export class PersonagensComponent implements OnInit {
     );
   }
 
-  showDetails(personagem) {
-    this.dialog.open(PersonagemDialogComponent, {
-      data: {
-        body: personagem,
-      },
-    });
+  persongensDestaque() {
+    for (let i = 0; i <=3; i++) {
+    this.destaques[i] = this.personagens[i];
+    }
+    console.log(this.destaques);
+  }
+
+  getId(index) {
+    this.id = index;
+    this.isActivate = true;
+    console.log(this.isActivate);
+    console.log(this.id);
   }
 }

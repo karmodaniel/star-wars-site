@@ -15,6 +15,7 @@ import { PersonagensComponent } from './personagens/personagens.component';
 import { ApiStarWarsService } from './api-star-wars.service';
 import { PersonagemDialogComponent } from './personagem-dialog/personagem-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatTabsModule,
     HttpClientModule,
     MatDialogModule,
+    MatDividerModule
   ],
   providers: [ApiStarWarsService, HttpClientModule],
   bootstrap: [AppComponent],
