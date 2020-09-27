@@ -1,1 +1,69 @@
-<p>planetas works!</p>
+<!--  BG-PLANETAS -->
+<section class="bg-planetas">
+  <div class="container">
+    <div class="info">
+      <h1>Planetas de Star Wars</h1>
+      <p>Explore os planetas da saga espacial mais amada da cultura pop.</p>
+    </div>
+  </div>
+</section>
+
+<section class="planeta-destaque flex-item-5">
+  <div class="container">
+    <div class="planeta">
+      <div>
+        <h2>Planeta em destaque</h2>
+      </div>
+      <div class="planeta-img">
+        <img
+          src="../../assets/planetas/tatooine-card.png"
+          alt="Planeta Totooine Star Wrs"
+        />
+      </div>
+      <div class="planeta-nome">
+        <h2>Tatooine</h2>
+      </div>
+    </div>
+
+    <div class="planeta-info flex-item-6">
+      <p>
+        <strong>Tatooine</strong> era um planeta deserto circumbinário esparsamente habitado,
+        localizado nos Territórios da Orla Externa da galáxia. Era o mundo natal
+        de Anakin e Luke Skywalker, que iria moldar a história galáctica. Parte
+        de um sistema estelar binário, o planeta foi oprimido por sóis
+        escaldantes, resultando em um mundo sem a água de superfície necessária
+        para sustentar grandes populações.
+      </p>
+    </div>
+  </div>
+</section>
+
+ <!-- TODOS OS PLANETAS -->
+<section class="planetas">
+    <div class="container">
+      <div class="flex-item-8">
+        <h1>Lista de Planetas Star Wars</h1>
+      </div>
+      <mat-divider class="flex-item-4"></mat-divider>
+      <div class="itens">
+        <mat-card
+          *ngFor="let plan of planets; index as pos"
+          class="card"
+        >
+          <img
+            mat-card-image
+            [attr.src]="plan.img"
+          />
+          <mat-card-content>
+            <div class="tags">
+              <span class="jedi"> JEDI </span>
+              <span class="rebeliao"> REBELIÃO </span>
+            </div>
+            <h2>
+              {{ plan.name }}
+            </h2>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </section>
