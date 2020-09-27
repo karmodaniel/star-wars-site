@@ -1,3 +1,52 @@
+/* TRIOLOGIA PREQUELS */
+.prequels {
+  background: url("../../assets/filmes/bg-prequels.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.prequels-title {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.prequels-title img {
+  max-width: 100%;
+}
+
+.posters {
+  background-color: #dcdcdc;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 0px;
+  padding-top: 30px;
+  margin-bottom: 60px;
+}
+
+.card-prequels {
+  background-color: #dcdcdc;
+  box-shadow: none;
+  border-radius: 0;
+  margin-left: 80px;
+  float: left;
+}
+
+.card-prequels p {
+  text-align: center;
+  color: #000000;
+  font-size: 1.1em;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 788px) and (max-width: 1249px) {
+  .posters {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 30px;
+    margin-bottom: 60px;
+  }
+}
+
 /* BG-FILMES */
 .bg-filmes {
   background: url("../../assets/filmes/bg-filmes-pg.jpg") no-repeat center;
@@ -61,14 +110,14 @@
 .itens {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  
 }
 
 .card {
   height: 500px;
   margin-bottom: 30px;
   box-shadow: 1px 1px 1px #c4c4c4, -1px -1px 1px #c4c4c4;
-  margin-right: 10px;
+  margin-right: 5px
 }
 
 .card:hover {

@@ -8,6 +8,7 @@ import { ApiStarWarsService } from '../api-star-wars.service';
 })
 export class FilmesComponent implements OnInit {
   filmes: Array<any> = new Array();
+  prequels: Array<any> = new Array();
   imagens = [
     "../../assets/filmes/uma-nova-esperanca.jpg",
     "../../assets/filmes/imperio-contra-ataca.jpg",
@@ -32,12 +33,24 @@ export class FilmesComponent implements OnInit {
           filme.img = this.imagens[cont];
           cont++;
         }
+        this.triologiaPrequels()
         console.log(this.filmes);
       },
       (err) => {
         console.log('Erro ao listar os personagens.', err);
       }
     );
+  }
+
+  triologiaPrequels() {
+    let cont= 0;
+    for(let i=0; i <=5; i++) {
+        if (i > 2) {
+          this.prequels[cont] = this.filmes[i];
+          cont++;
+        }
+    }
+    console.log(this.prequels);
   }
 
 
