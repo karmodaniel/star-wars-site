@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ApiStarWarsService } from '../api-star-wars.service';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { PersonagemDialogComponent } from '../personagem-dialog/personagem-dialog.component';
 
 @Component({
   selector: 'app-personagens',
@@ -8,7 +10,10 @@ import { ApiStarWarsService } from '../api-star-wars.service';
   styleUrls: ['./personagens.component.css'],
 })
 export class PersonagensComponent implements OnInit {
-  constructor(private apiStarWars: ApiStarWarsService) {}
+  constructor(
+    private apiStarWars: ApiStarWarsService,
+    public dialog: MatDialog
+    ) {}
 
   personagens: Array<any> = new Array();
   destaques: Array<any> = new Array();
@@ -56,10 +61,12 @@ export class PersonagensComponent implements OnInit {
     console.log(this.destaques);
   }
 
-  getId(index) {
-    this.id = index;
-    this.isActivate = true;
-    console.log(this.isActivate);
-    console.log(this.id);
+  showDetails(personagem) {
+    this.dialog.open(PersonagemDialogComponent, {
+      data: {
+        body: personagem,
+      },
+    });
+
   }
 }
