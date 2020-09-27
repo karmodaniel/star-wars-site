@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { FilmesComponent } from './filmes/filmes.component';
 import { HomeComponent } from './home/home.component';
 import { PersonagensComponent } from './personagens/personagens.component';
+import { PlanetasComponent } from './planetas/planetas.component';
 
 const routes: Routes = [
   {
@@ -15,7 +16,12 @@ const routes: Routes = [
   },
   {
     path: 'filmes',
-    component: FilmesComponent},
+    component: FilmesComponent
+  },
+  {
+    path: 'planetas',
+    component: PlanetasComponent
+  },
   {
     path: '**',
     redirectTo: 'home'
