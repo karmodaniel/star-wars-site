@@ -12,4 +12,8 @@ export class ApiStarWarsService {
   getPersonagens(): Observable<any> {
     return this.http.get("https://swapi.dev/api/people");
   }
+
+  getFilmes(): Observable<any> {
+    return this.http.get(" https://swapi.dev/api/films");
+  }
 }
