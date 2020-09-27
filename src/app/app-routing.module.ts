@@ -5,8 +5,16 @@ import { PersonagensComponent } from './personagens/personagens.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
+    component: HomeComponent
+  },
+  {
+    path: 'personagens',
     component: PersonagensComponent
+  },
+  {
+    path: '**',
+    redirectTo: 'home'
   }
 ];
 
