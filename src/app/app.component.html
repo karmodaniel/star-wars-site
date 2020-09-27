@@ -1,75 +1,82 @@
 <header class="header">
-    <div class="container">
-      <a href="#" class="header_logo flex-item-2">
-        <img
-          src="../assets/home/star-wars-logo1.svg"
-          alt="Star Wars Forever logo"
-        />
-      </a>
-  
-      <div class="nav flex-item-10 item">
-        <nav class="header_menu">
-          <ul>
-            <li><a routerLink="home" routerLinkActive="active">Home</a></li>
-            <li><a href="#">Filmes</a></li>
-            <li><a routerLink="personagens" routerLinkActive="active">Personagens</a></li>
-            <li><a href="#">Planetas</a></li>
-            <li><a href="#">Naves</a></li>
-          </ul>
-        </nav>
-  
-        <form class="form item">
-          <input type="search" />
-          <button class="btn">
-            <img src="../assets/home/lightsaber.svg" alt="Buscar" />
-          </button>
-        </form>
-      </div>
+  <div class="container">
+    <a href="#" class="header_logo flex-item-2">
+      <img
+        src="../assets/home/star-wars-logo1.svg"
+        alt="Star Wars Forever logo"
+      />
+    </a>
+
+    <div class="nav flex-item-10 item">
+      <nav class="header_menu">
+        <ul>
+          <li><a routerLink="home" routerLinkActive="active">Home</a></li>
+          <li><a href="#">Filmes</a></li>
+          <li>
+            <a routerLink="personagens" routerLinkActive="active"
+              >Personagens</a
+            >
+          </li>
+          <li><a href="#">Planetas</a></li>
+          <li><a href="#">Naves</a></li>
+        </ul>
+      </nav>
+
+      <form class="form item">
+        <input type="search" />
+        <button class="btn">
+          <img src="../assets/home/lightsaber.svg" alt="Buscar" />
+        </button>
+      </form>
     </div>
-  </header>
+  </div>
+</header>
 <router-outlet></router-outlet>
 <!-- FRASE -->
 
 <section class="container">
-    <div class="slogan">
-      <img
-        src="../assets/home/slogan.svg"
-        alt="Frase May the force be always with you"
-      />
+  <div class="slogan">
+    <img
+      src="../assets/home/slogan.svg"
+      alt="Frase May the force be always with you"
+    />
+  </div>
+  <div class="slogan-mobile">
+    <img
+      src="../assets/home/slogan-mobile.png"
+      alt="Frase May the force be always with you"
+    />
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <p class="flex-item-6">
+      Todos os direitos reservados. Star Wars Forever 2020.
+    </p>
+    <div class="redes flex-item-3">
+      <h3>Conheça nossas redes</h3>
+      <ul>
+        <li>
+          <a href="https://twitter.com/starwars" target="_blank">
+            <img src="../assets/redes/twitter.png" alt="Twitter"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/StarWars" target="_blank">
+            <img src="../assets/redes/facebook.png" alt="Facebook"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/starwars/" target="_blank">
+            <img src="../assets/redes/instagram.png" alt="instagram"
+          /></a>
+        </li>
+      </ul>
     </div>
-    <div class="slogan-mobile">
-      <img
-        src="../assets/home/slogan-mobile.png"
-        alt="Frase May the force be always with you"
-      />
+    <div class="estrela flex-item-3">
+      <img src="../assets/home/estrela-da-morte.svg" alt="Estrela da morte" />
     </div>
-  </section>
-  
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <p class="flex-item-8">
-        Todos os direitos reservados. Star Wars Forever 2020.
-      </p>
-      <div class="redes flex-item-4">
-        <h3>Conheça nossas redes</h3>
-        <ul>
-          <li>
-            <a href="https://www.twitter.com" target="_blank">
-              <img src="../assets/redes/twitter.png" alt="Twitter"
-            /></a>
-          </li>
-          <li>
-            <a href="https://www.facebook.com" target="_blank">
-              <img src="../assets/redes/facebook.png" alt="Facebook"
-            /></a>
-          </li>
-          <li>
-            <a href="https://www.intagram.com" target="_blank">
-              <img src="../assets/redes/instagram.png" alt="instagram"
-            /></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </footer>
+  </div>
+</footer>
