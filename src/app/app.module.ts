@@ -17,6 +17,7 @@ import { PersonagemDialogComponent } from './personagem-dialog/personagem-dialog
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatDividerModule} from '@angular/material/divider';
 import { FilmesComponent } from './filmes/filmes.component';
+import { PlanetasComponent } from './planetas/planetas.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FilmesComponent } from './filmes/filmes.component';
     PersonagensComponent,
     PersonagemDialogComponent,
     FilmesComponent,
+    PlanetasComponent,
   ],
   imports: [
     BrowserModule,
