@@ -1,1 +1,108 @@
-<p>naves works!</p>
+<!--  BG-NAVES -->
+<section class="bg-naves">
+  <div class="container">
+    <div class="bg-info-naves">
+      <h1>Naves de Star Wars</h1>
+      <p>Explore as naves da saga espacial mais amada da cultura pop.</p>
+    </div>
+  </div>
+</section>
+
+<!-- NAVES EM DESTAQUE-->
+
+<section class="naves">
+  <div class="container">
+    <mat-tab-group mat-align-tabs="start" class="flex-item-12">
+      <mat-tab label="REBELIÃO">
+        <div class="naves-content">
+          <span class="nave">
+            <img src="../../assets/home/x-wing.png" alt="Nave X-Windg" />
+          </span>
+          <div class="info">
+            <h2>X-Wing</h2>
+
+            <p>
+              Os caças X-wing eram um tipo de caça estelar marcado por seus
+              distintos S-foils que se assemelhavam ao personagem "X" do script
+              High Galactic em formação de ataque. Eles estavam fortemente
+              armados com quatro canhões de laser nos S-foils e lançadores de
+              torpedos de prótons na fuselagem. As asas-X foram projetadas para
+              brigas de cães e missões longas.
+            </p>
+          </div>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="IMPÉRIO">
+        <div class="naves-content">
+          <span class="nave">
+            <img
+              src="../../assets/naves/star-destryer-card.png"
+              alt="Nave X-Windg"
+            />
+          </span>
+          <div class="info">
+            <h2>Star Destroyer</h2>
+
+            <p>
+              Os Destroyers Estelares eram as naves que mais consumiam recursos
+              que a galáxia já vira, e apenas Kuat possuía estaleiros capazes de
+              suportar e manter mais do que um punhado de cada vez.
+            </p>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="NAVES NEUTRAS">
+        <div class="naves-content">
+          <span class="nave">
+            <img
+              src="../../assets/naves/corvette-card.png"
+              alt="Nave X-Windg"
+            />
+          </span>
+          <div class="info">
+            <h2>CR-90 Corvette</h2>
+
+            <p>
+              Enquanto o CR90 veria uso inicial no final da República Galáctica
+              e no Senado Imperial, muitas embarcações seriam apropriadas pela
+              rebelião inicial e pela Aliança Rebelde contra o Primeiro Império
+              Galáctico, apesar de não terem sido projetadas como uma nave
+              voltada para o combate.
+            </p>
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</section>
+
+<!-- TODOS AS NAVES -->
+<section class="todas-naves">
+  <div class="container">
+    <div class="flex-item-8">
+      <h1>Lista de Naves Star Wars</h1>
+    </div>
+    <mat-divider class="flex-item-4"></mat-divider>
+    <div class="itens">
+      <mat-card
+        *ngFor="let nav of naves; index as pos"
+        class="card"
+        (click)="showDetails(plan)"
+      >
+        <img mat-card-image [attr.src]="nav.img" />
+        <mat-card-content>
+          <div class="tags">
+            <span class="jedi"> JEDI </span>
+            <span class="rebeliao"> REBELIÃO </span>
+          </div>
+          <div class="nav-nome">
+            <h2>
+              {{ nav.name }}
+            </h2>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</section>

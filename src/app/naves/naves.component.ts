@@ -10,8 +10,8 @@ export class NavesComponent implements OnInit {
   naves: Array<any> = new Array();
   imagens = [
     '../../assets/naves/cr-90-corvette.png',
-    '../../assets/naves/star-destryer-card.png',
-    '../../assets/naves/sentinela.png',
+    '../../assets/naves/star-destryer.png',
+    '../../assets/naves/sentinela.jpg',
     '../../assets/naves/daeth-star.png',
     '../../assets/naves/millenium-falcon.png',
     '../../assets/naves/y-wing.png',
