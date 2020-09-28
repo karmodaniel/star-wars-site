@@ -3,7 +3,9 @@
   <div class="container">
     <div class="info">
       <h1>Planetas</h1>
-      <p>Viage pela galáxia, explorando os planetas dessa galáxia tão distante</p>
+      <p>
+        Viage pela galáxia, explorando os planetas dessa galáxia tão distante
+      </p>
     </div>
   </div>
 </section>
@@ -53,10 +55,13 @@
       >
         <img mat-card-image [attr.src]="plan.img" />
         <mat-card-content>
-          <div class="tags">
-            <span class="jedi"> JEDI </span>
-            <span class="rebeliao"> REBELIÃO </span>
+          
+          <div class="tags-planetas">
+            <div>
+              <span class="tag-clima"> {{ plan.climate }} </span>
+            </div>
           </div>
+
           <h2>
             {{ plan.name }}
           </h2>

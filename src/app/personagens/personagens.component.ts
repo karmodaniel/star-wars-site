@@ -31,19 +31,28 @@ export class PersonagensComponent implements OnInit {
     '../../assets/personagens/img-personagens/obi-wan-kenobi.png',
   ];
 
+  classe = [
+  'rebellion',
+  'rebellion',
+  'rebellion',
+  'empire',
+  'rebellion',
+  'neutral',
+  'neutral',
+  'neutral',
+  'rebellion',
+  'neutral',
+  ];
+
   ngOnInit() {
     this.fetchData();
   }
 
   fetchData() {
-    let cont = 0;
     this.apiStarWars.getPersonagens().subscribe(
       (personagem) => {
         this.personagens = personagem.results;
-        for (let pers of this.personagens) {
-          pers.img = this.imagens[cont];
-          cont++;
-        }
+        this.addNoPersonagem();
         this.persongensDestaque();
         console.log(this.personagens);
       },
@@ -58,6 +67,15 @@ export class PersonagensComponent implements OnInit {
       this.destaques[i] = this.personagens[i];
     }
   }
+
+  addNoPersonagem(){
+    let cont = 0;
+    for (let pers of this.personagens) {
+      pers.img = this.imagens[cont];
+      pers.class = this.classe[cont];
+      cont++;
+  }
+}
 
   showDetails(personagem) {
     this.dialog.open(DetalhesDialogComponent, {

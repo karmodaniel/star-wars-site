@@ -82,39 +82,24 @@
   transform: scale(1.1);
 }
 
-.tags {
+.tags-personagem {
   margin: 10px 10px 15px 10px;
 }
 
-.tags span {
+.tags-personagem span {
   width: 125px;
   height: 30px;
+  margin-left: 5px;
   padding: 3px 10px 3px 10px;
   font-weight: bold;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-.jedi {
-  background-color: #87e2ff;
+.tag-classe {
+  background-color: #FEFBDA;
 }
 
-.sith {
-  background-color: #fe7070;
-}
-
-.android {
-  background-color: #5ad446;
-}
-
-.rebeliao {
-  background-color: #ff9c07;
-  margin-left: 10px;
-}
-
-.imperio {
-  background-color: #c4c4c4;
-  margin-left: 10px;
-}
 
 .card h1 {
   font-size: 1.75em;

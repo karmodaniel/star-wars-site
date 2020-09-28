@@ -2,7 +2,7 @@
   <img mat-card-image [attr.src]="body.img" [attr.alt]="body.name" />
   <div class="descricao">
     <div class="tag">
-      <span class="jedi"> JEDI </span>
+      <span class="classe"> {{ body.class }} </span>
     </div>
     <h1>
       {{ body.name }}
@@ -38,7 +38,7 @@
   <img mat-card-image [attr.src]="body.img" [attr.alt]="body.name" />
   <div class="descricao">
     <div class="tag">
-      <span class="diretor"> {{ body.terrain }} </span>
+      <span class="diretor"> {{ body.climate }} </span>
     </div>
     <h1>
       {{ body.name }}
@@ -58,7 +58,7 @@
   <img mat-card-image [attr.src]="body.img" [attr.alt]="body.title" />
   <div class="descricao">
     <div class="tag">
-      <span class="diretor"> {{ body.starship_class }} </span>
+      <span class="classe-naves"> {{ body.starship_class }} </span>
     </div>
     <h1>
       {{ body.name }}

@@ -108,38 +108,21 @@
   transform: scale(1.1);
 }
 
-.tags {
+.tags-planetas {
   margin: 10px 10px 15px 10px;
 }
 
-.tags span {
+.tags-planetas span {
   width: 125px;
   height: 30px;
   padding: 3px 10px 3px 10px;
   font-weight: bold;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-.jedi {
+.tags-planetas .tag-clima{
   background-color: #87e2ff;
-}
-
-.sith {
-  background-color: #fe7070;
-}
-
-.android {
-  background-color: #5ad446;
-}
-
-.rebeliao {
-  background-color: #ff9c07;
-  margin-left: 10px;
-}
-
-.imperio {
-  background-color: #c4c4c4;
-  margin-left: 10px;
 }
 
 .card h1 {

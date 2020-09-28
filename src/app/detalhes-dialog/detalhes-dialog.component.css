@@ -8,14 +8,19 @@
   padding: 3px 10px 3px 10px;
   font-weight: bold;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .diretor {
-  background-color: #87e2ff;
+  background-color: #6B88D2;
 }
 
-.jedi {
-  background-color: #ff9c07;
+.classe {
+  background-color: #FEFBDA;
+}
+
+.classe-naves {
+  background-color: #5FAE97;
 }
 
 .descricao {
