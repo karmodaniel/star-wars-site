@@ -1,9 +1,35 @@
-<img mat-card-image [attr.src]="personagem.img" alt="Foto Luke Skywalker" />
-<div>
-  <span class="jedi"> JEDI </span>
-  <span class="rebeliao"> REBELIÃO </span>
-  <h1>
-    {{ personagem.name }}
-  </h1>
+<div *ngIf="tipo === 'personagem'">
+  <img mat-card-image [attr.src]="body.img" alt="body.name" />
+  <div class="descricao">
+    <div class="tag">
+      <span class="jedi"> JEDI </span>
+    </div>
+    <h1>
+      {{ body.name }}
+    </h1>
+    <p><strong>Nascimento:</strong> {{ body.birth_year }}</p>
+    <p><strong>Cor da pele:</strong> {{ body.skin_color }}</p>
+    <p><strong>Cor dos olhos:</strong> {{ body.eye_color }}</p>
+    <p><strong>Cor do cabelo:</strong> {{ body.hair_color }}</p>
+    <p><strong>Gênero:</strong> {{ body.gender }}</p>
+    <p><strong>Altura:</strong> {{ body.height }}</p>
+    <p><strong>Peso:</strong> {{ body.mass }}</p>
+  </div>
 </div>
-.
+
+<div *ngIf="tipo === 'filme'">
+  <img mat-card-image [attr.src]="body.img" alt="body.title" />
+  <div class="descricao">
+    <div class="tag">
+      <span class="diretor"> {{ body.director }} </span>
+    </div>
+    <h1>
+      {{ body.title }}
+    </h1>
+    <p><strong>Diretor:</strong> {{ body.director }}</p>
+    <p><strong>Produção:</strong> {{ body.producer }}</p>
+    <p><strong>Episódio:</strong> {{ body.episode_id }}</p>
+    <p><strong>Lançamento:</strong> {{ body.release_date }}</p>
+    <p><strong>Sinopse:</strong> {{ body.opening_crawl }}</p>
+  </div>
+</div>

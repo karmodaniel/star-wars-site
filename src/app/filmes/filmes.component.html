@@ -1,14 +1,14 @@
 <!--  BG-FILMES -->
 <section class="bg-filmes">
-    <div class="container">
-      <div class="info">
-        <h1>Filmes de Star Wars</h1>
-        <p>Veja informações das duas triologias da maior saga da cultura pop.</p>
-      </div>
+  <div class="container">
+    <div class="info">
+      <h1>Filmes de Star Wars</h1>
+      <p>Veja informações das duas triologias da maior saga da cultura pop.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- TRIOLOGIA PREQUELS -->
+<!-- TRIOLOGIA PREQUELS -->
 
 <section class="prequels">
   <div class="prequels-title">
@@ -46,44 +46,38 @@
           alt="Poster do filme Star Wars: A vingança dos Sith"
         />
         <mat-card-content>
-          <p>A vingança dos Sith </p>
+          <p>A vingança dos Sith</p>
         </mat-card-content>
       </mat-card>
     </mat-card>
   </div>
 </section>
 
-  
-
 <!-- FILMES -->
 <section class="filmes">
-    <div class="container">
-      <!-- TODOS OS FILME -->
-      <div class="flex-item-8">
-        <h1>Lista de Filme Star Wars</h1>
-      </div>
-      <mat-divider class="flex-item-4"></mat-divider>
-  
-      <div class="itens">
-        <mat-card
-          *ngFor="let filme of filmes; index as pos"
-          class="card"
-        >
-          <img
-            mat-card-image
-            [attr.src]="filme.img"
-          />
-          <mat-card-content>
-            <div class="tags">
-              <span class="jedi"> JEDI </span>
-              <span class="rebeliao"> REBELIÃO </span>
-            </div>
-            <h2>
-              {{ filme.title }}
-            </h2>
-          </mat-card-content>
-        </mat-card>
-      </div>
+  <div class="container">
+    <!-- TODOS OS FILME -->
+    <div class="flex-item-8">
+      <h1>Lista de Filme Star Wars</h1>
     </div>
-  </section>
-  
+    <mat-divider class="flex-item-4"></mat-divider>
+
+    <div class="itens">
+      <mat-card
+        *ngFor="let filme of filmes; index as pos"
+        class="card"
+        (click)="showDetails(filme)"
+      >
+        <img mat-card-image [attr.src]="filme.img" />
+        <mat-card-content>
+          <div class="tags">
+            <span class="jedi"> {{ filme.director }} </span>
+          </div>
+          <h2>
+            {{ filme.title }}
+          </h2>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</section>

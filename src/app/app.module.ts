@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
@@ -15,7 +16,7 @@ import { PersonagensComponent } from './personagens/personagens.component';
 import { ApiStarWarsService } from './api-star-wars.service';
 import { PersonagemDialogComponent } from './personagem-dialog/personagem-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import {MatDividerModule} from '@angular/material/divider';
+import { MatDividerModule } from '@angular/material/divider';
 import { FilmesComponent } from './filmes/filmes.component';
 import { PlanetasComponent } from './planetas/planetas.component';
 
@@ -30,6 +31,7 @@ import { PlanetasComponent } from './planetas/planetas.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,
@@ -38,7 +40,7 @@ import { PlanetasComponent } from './planetas/planetas.component';
     MatTabsModule,
     HttpClientModule,
     MatDialogModule,
-    MatDividerModule
+    MatDividerModule,
   ],
   providers: [ApiStarWarsService, HttpClientModule],
   bootstrap: [AppComponent],

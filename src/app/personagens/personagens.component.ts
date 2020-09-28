@@ -13,7 +13,7 @@ export class PersonagensComponent implements OnInit {
   constructor(
     private apiStarWars: ApiStarWarsService,
     public dialog: MatDialog
-    ) {}
+  ) {}
 
   personagens: Array<any> = new Array();
   destaques: Array<any> = new Array();
@@ -55,8 +55,8 @@ export class PersonagensComponent implements OnInit {
   }
 
   persongensDestaque() {
-    for (let i = 0; i <=3; i++) {
-    this.destaques[i] = this.personagens[i];
+    for (let i = 0; i <= 3; i++) {
+      this.destaques[i] = this.personagens[i];
     }
     console.log(this.destaques);
   }
@@ -64,9 +64,9 @@ export class PersonagensComponent implements OnInit {
   showDetails(personagem) {
     this.dialog.open(PersonagemDialogComponent, {
       data: {
+        title: 'personagem',
         body: personagem,
       },
     });
-
   }
 }

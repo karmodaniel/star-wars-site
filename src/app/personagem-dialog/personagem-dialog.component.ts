@@ -7,10 +7,12 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./personagem-dialog.component.css'],
 })
 export class PersonagemDialogComponent implements OnInit {
-  personagem: any;
+  tipo: any;
+  body: any;
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
-    this.personagem = data.body;
+    this.tipo = data.title;
+    this.body = data.body;
   }
 
   ngOnInit(): void {}
