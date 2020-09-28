@@ -37,6 +37,11 @@
   background-color: #000;
 }
 
+.planeta-img img{
+  width: 100%;
+  display: block;
+}
+
 .planeta-destaque h2 {
   color: #fff;
   font-size: 3em;
@@ -61,6 +66,34 @@
   font-size: 1.75em;
   font-weight: lighter;
   line-height: 35px;
+}
+
+@media (min-width: 788px) and (max-width: 1249px) { 
+
+  .planeta {
+    margin: 0 auto;
+  }
+
+  .planeta-info {
+    flex: 0 0 800px;
+    max-width: 800px;
+    padding-bottom: 60px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 787px) {
+  .planeta-info {
+    flex: 0 0 400px;
+    max-width: 400px;
+    padding-bottom: 60px;
+    margin: 0 auto;
+  }
+
+  .planeta-info p{
+    font-size: 1.375em;
+  }
+
 }
 
 /* FILMES */
@@ -131,21 +164,36 @@
 }
 
 @media (min-width: 788px) and (max-width: 1249px) {
+  .itens {
+    justify-content: center;
+  }
+
   .card {
-    max-width: 400px;
     margin: 0 auto;
     margin-bottom: 40px;
   }
 }
 
 @media (max-width: 787px) {
+  .bg-planetas{
+    margin-top: 380px;
+  }
+
   .itens {
     flex-direction: column;
   }
 
   .card {
-    max-width: 300px;
     margin: 0 auto;
     margin-bottom: 40px;
+  }
+
+  .mat-divider {
+    display: none;
+  }
+
+  .lista-planetas-titulo {
+    font-size: 1.2em;
+    max-width: 100%;
   }
 }
