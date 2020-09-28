@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { ApiStarWarsService } from '../api-star-wars.service';
-import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { PersonagemDialogComponent } from '../personagem-dialog/personagem-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
+import { DetalhesDialogComponent } from '../detalhes-dialog/detalhes-dialog.component';
 
 @Component({
   selector: 'app-personagens',
@@ -17,8 +16,8 @@ export class PersonagensComponent implements OnInit {
 
   personagens: Array<any> = new Array();
   destaques: Array<any> = new Array();
-  isActivate: Boolean = false;
-  id: Number;
+  isActivate = false;
+  id: number;
   imagens = [
     '../../assets/personagens/img-personagens/luke-skywalker.png',
     '../../assets/personagens/img-personagens/c3po.png',
@@ -58,11 +57,10 @@ export class PersonagensComponent implements OnInit {
     for (let i = 0; i <= 3; i++) {
       this.destaques[i] = this.personagens[i];
     }
-    console.log(this.destaques);
   }
 
   showDetails(personagem) {
-    this.dialog.open(PersonagemDialogComponent, {
+    this.dialog.open(DetalhesDialogComponent, {
       data: {
         title: 'personagem',
         body: personagem,

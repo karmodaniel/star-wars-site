@@ -1,8 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
@@ -14,7 +12,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { PersonagensComponent } from './personagens/personagens.component';
 import { ApiStarWarsService } from './api-star-wars.service';
-import { PersonagemDialogComponent } from './personagem-dialog/personagem-dialog.component';
+import { DetalhesDialogComponent } from './detalhes-dialog/detalhes-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
 import { FilmesComponent } from './filmes/filmes.component';
@@ -26,7 +24,7 @@ import { NavesComponent } from './naves/naves.component';
     AppComponent,
     HomeComponent,
     PersonagensComponent,
-    PersonagemDialogComponent,
+    DetalhesDialogComponent,
     FilmesComponent,
     PlanetasComponent,
     NavesComponent,

@@ -2,11 +2,11 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-personagem-dialog',
-  templateUrl: './personagem-dialog.component.html',
-  styleUrls: ['./personagem-dialog.component.css'],
+  selector: 'app-detalhes-dialog',
+  templateUrl: './detalhes-dialog.component.html',
+  styleUrls: ['./detalhes-dialog.component.css'],
 })
-export class PersonagemDialogComponent implements OnInit {
+export class DetalhesDialogComponent implements OnInit {
   tipo: any;
   body: any;
 

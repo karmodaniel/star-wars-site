@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiStarWarsService } from '../api-star-wars.service';
-import { PersonagemDialogComponent } from '../personagem-dialog/personagem-dialog.component';
+import { DetalhesDialogComponent } from '../detalhes-dialog/detalhes-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
@@ -55,11 +55,10 @@ export class FilmesComponent implements OnInit {
         cont++;
       }
     }
-    console.log(this.prequels);
   }
 
   showDetails(personagem) {
-    this.dialog.open(PersonagemDialogComponent, {
+    this.dialog.open(DetalhesDialogComponent, {
       data: {
         title: 'filme',
         body: personagem,
