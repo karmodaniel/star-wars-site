@@ -7,21 +7,21 @@ import { Observable } from 'rxjs';
 })
 export class ApiStarWarsService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private https: HttpClient) { }
   
   getFilmes(): Observable<any> {
-    return this.http.get(" https://swapi.dev/api/films");
+    return this.https.get(" https://swapi.dev/api/films");
   }
 
   getPersonagens(): Observable<any> {
-    return this.http.get("https://swapi.dev/api/people");
+    return this.https.get("https://swapi.dev/api/people");
   }
 
   getPlanetas(): Observable<any> {
-    return this.http.get(" https://swapi.dev/api/planets");
+    return this.https.get(" https://swapi.dev/api/planets");
   }
 
   getNaves(): Observable<any> {
-    return this.http.get(" https://swapi.dev/api/starships");
+    return this.https.get(" https://swapi.dev/api/starships");
   }
 }
