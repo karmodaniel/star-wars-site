@@ -7,7 +7,7 @@
 ## Try it yourself
 
 
-First, you need to have [Node.js]('https://nodejs.org/') and [Angular CLI](https://github.com/angular/angular-cli) installed.
+First, you need to have [Node.js]('https://nodejs.org.com') and [Angular CLI](https://github.com/angular/angular-cli) installed.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
