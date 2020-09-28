@@ -57,11 +57,11 @@ export class FilmesComponent implements OnInit {
     }
   }
 
-  showDetails(personagem) {
+  showDetails(filme) {
     this.dialog.open(DetalhesDialogComponent, {
       data: {
         title: 'filme',
-        body: personagem,
+        body: filme,
       },
     });
   }

@@ -13,6 +13,7 @@ export class DetalhesDialogComponent implements OnInit {
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
     this.tipo = data.title;
     this.body = data.body;
+    // console.log(this.body);
   }
 
   ngOnInit(): void {}

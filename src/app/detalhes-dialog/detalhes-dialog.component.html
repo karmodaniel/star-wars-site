@@ -1,5 +1,5 @@
 <div *ngIf="tipo === 'personagem'">
-  <img mat-card-image [attr.src]="body.img" alt="body.name" />
+  <img mat-card-image [attr.src]="body.img" [attr.alt]="body.name" />
   <div class="descricao">
     <div class="tag">
       <span class="jedi"> JEDI </span>
@@ -18,7 +18,7 @@
 </div>
 
 <div *ngIf="tipo === 'filme'">
-  <img mat-card-image [attr.src]="body.img" alt="body.title" />
+  <img mat-card-image [attr.src]="body.img" [attr.alt]="body.title" />
   <div class="descricao">
     <div class="tag">
       <span class="diretor"> {{ body.director }} </span>
@@ -35,7 +35,7 @@
 </div>
 
 <div *ngIf="tipo === 'planeta'">
-  <img mat-card-image [attr.src]="body.img" alt="body.name" />
+  <img mat-card-image [attr.src]="body.img" [attr.alt]="body.name" />
   <div class="descricao">
     <div class="tag">
       <span class="diretor"> {{ body.terrain }} </span>
@@ -55,18 +55,22 @@
 </div>
 
 <div *ngIf="tipo === 'nave'">
-  <img mat-card-image [attr.src]="body.img" alt="body.title" />
+  <img mat-card-image [attr.src]="body.img" [attr.alt]="body.title" />
   <div class="descricao">
     <div class="tag">
-      <span class="diretor"> {{ body.director }} </span>
+      <span class="diretor"> {{ body.starship_class }} </span>
     </div>
     <h1>
-      {{ body.title }}
+      {{ body.name }}
     </h1>
-    <p><strong>Diretor:</strong> {{ body.director }}</p>
-    <p><strong>Produção:</strong> {{ body.producer }}</p>
-    <p><strong>Episódio:</strong> {{ body.episode_id }}</p>
-    <p><strong>Lançamento:</strong> {{ body.release_date }}</p>
-    <p><strong>Sinopse:</strong> {{ body.opening_crawl }}</p>
+    <p><strong>MGLT:</strong> {{ body.MGLT }}</p>
+    <p><strong>Capacidade de carga:</strong> {{ body.cargo_capacity }}</p>
+    <p><strong>Consumíveis:</strong> {{ body.consumables }}</p>
+    <p><strong>Custo de créditos:</strong> {{ body.cost_in_credits }}</p>
+    <p><strong>Tripulação:</strong> {{ body.crew }}</p>
+    <p><strong>Hiper-direção:</strong> {{ body.hyperdrive_rating }}</p>
+    <p><strong>Tamanho:</strong> {{ body.length }}</p>
+    <p><strong>Passageiros:</strong> {{ body.passengers }}</p>
+    <p><strong>Classe da nave:</strong> {{ body.starship_class }}</p>
   </div>
 </div>

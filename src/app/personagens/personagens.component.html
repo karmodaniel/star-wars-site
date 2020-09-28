@@ -17,7 +17,7 @@
     </div>
     <div class="itens">
       <mat-card
-        *ngFor="let personagem of destaques; index as pos"
+        *ngFor="let personagem of destaques"
         class="card"
         (click)="showDetails(personagem)"
       >
@@ -46,7 +46,7 @@
 
     <div class="itens">
       <mat-card
-        *ngFor="let personagem of personagens; index as pos"
+        *ngFor="let personagem of personagens"
         class="card"
         (click)="showDetails(personagem)"
       >

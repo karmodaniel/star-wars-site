@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiStarWarsService } from '../api-star-wars.service';
+import { DetalhesDialogComponent } from '../detalhes-dialog/detalhes-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-naves',
   templateUrl: './naves.component.html',
-  styleUrls: ['./naves.component.css']
+  styleUrls: ['./naves.component.css'],
 })
 export class NavesComponent implements OnInit {
   naves: Array<any> = new Array();
@@ -19,9 +21,12 @@ export class NavesComponent implements OnInit {
     '../../assets/naves/tie-advance.png',
     '../../assets/naves/executor.png',
     '../../assets/naves/rebel-transport.png',
-]
+  ];
 
-  constructor(private apiStarWars: ApiStarWarsService) { }
+  constructor(
+    private apiStarWars: ApiStarWarsService,
+    public dialog: MatDialog
+  ) {}
 
   ngOnInit() {
     this.fetchDataPlanetas();
@@ -39,7 +44,7 @@ export class NavesComponent implements OnInit {
     );
   }
 
-  addImagem(){
+  addImagem() {
     let cont = 0;
     for (let ship of this.naves) {
       ship.img = this.imagens[cont];
@@ -48,4 +53,13 @@ export class NavesComponent implements OnInit {
     console.log(this.naves);
   }
 
+  showDetails(plan) {
+    console.log(plan);
+    this.dialog.open(DetalhesDialogComponent, {
+      data: {
+        title: 'nave',
+        body: plan,
+      },
+    });
+  }
 }
