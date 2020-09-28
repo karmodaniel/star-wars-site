@@ -9,16 +9,16 @@ import { ApiStarWarsService } from '../api-star-wars.service';
 export class PlanetasComponent implements OnInit {
   planets: Array<any> = new Array();
   imagens = [
+    '../../assets/planetas/tatoooine.jpg',
     '../../assets/planetas/alderaan.png',
-    '../../assets/planetas/bespin.jpg',
-    '../../assets/planetas/coruscant.png',
-    '../../assets/planetas/dagobah.jpg',
-    '../../assets/planetas/endor.png',
+    '../../assets/planetas/yavin-4.png',
     '../../assets/planetas/hoth.jpg',
-    '../../assets/planetas/kamino.png',
+    '../../assets/planetas/dagobah.jpg',
+    '../../assets/planetas/bespin.jpg',
+    '../../assets/planetas/endor.png',
     '../../assets/planetas/naboo.png',
-    '../../assets/planetas/tatooine-card.png',
-    '../../assets/planetas/yavin-4.png'
+    '../../assets/planetas/coruscant.png',
+    '../../assets/planetas/kamino.png'
   ];
 
   constructor(private apiStarWars: ApiStarWarsService) { }
