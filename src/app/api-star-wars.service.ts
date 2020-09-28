@@ -20,4 +20,8 @@ export class ApiStarWarsService {
   getPlanetas(): Observable<any> {
     return this.http.get(" https://swapi.dev/api/planets");
   }
+
+  getNaves(): Observable<any> {
+    return this.http.get(" https://swapi.dev/api/starships");
+  }
 }

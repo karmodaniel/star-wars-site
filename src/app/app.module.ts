@@ -19,6 +19,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
 import { FilmesComponent } from './filmes/filmes.component';
 import { PlanetasComponent } from './planetas/planetas.component';
+import { NavesComponent } from './naves/naves.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { PlanetasComponent } from './planetas/planetas.component';
     PersonagemDialogComponent,
     FilmesComponent,
     PlanetasComponent,
+    NavesComponent,
   ],
   imports: [
     BrowserModule,
