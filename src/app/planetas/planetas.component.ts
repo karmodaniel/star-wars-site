@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiStarWarsService } from '../api-star-wars.service';
+import { DetalhesDialogComponent } from '../detalhes-dialog/detalhes-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-planetas',
   templateUrl: './planetas.component.html',
-  styleUrls: ['./planetas.component.css']
+  styleUrls: ['./planetas.component.css'],
 })
 export class PlanetasComponent implements OnInit {
   planets: Array<any> = new Array();
@@ -18,10 +20,13 @@ export class PlanetasComponent implements OnInit {
     '../../assets/planetas/endor.png',
     '../../assets/planetas/naboo.png',
     '../../assets/planetas/coruscant.png',
-    '../../assets/planetas/kamino.png'
+    '../../assets/planetas/kamino.png',
   ];
 
-  constructor(private apiStarWars: ApiStarWarsService) { }
+  constructor(
+    private apiStarWars: ApiStarWarsService,
+    public dialog: MatDialog
+  ) {}
 
   ngOnInit() {
     this.fetchDataPlanetas();
@@ -44,4 +49,12 @@ export class PlanetasComponent implements OnInit {
     );
   }
 
+  showDetails(planeta) {
+    this.dialog.open(DetalhesDialogComponent, {
+      data: {
+        title: 'planeta',
+        body: planeta,
+      },
+    });
+  }
 }

@@ -33,3 +33,40 @@
     <p><strong>Sinopse:</strong> {{ body.opening_crawl }}</p>
   </div>
 </div>
+
+<div *ngIf="tipo === 'planeta'">
+  <img mat-card-image [attr.src]="body.img" alt="body.name" />
+  <div class="descricao">
+    <div class="tag">
+      <span class="diretor"> {{ body.terrain }} </span>
+    </div>
+    <h1>
+      {{ body.name }}
+    </h1>
+    <p><strong>Clima:</strong> {{ body.climate }}</p>
+    <p><strong>Diâmetro:</strong> {{ body.diameter }}</p>
+    <p><strong>Gravidade:</strong> {{ body.gravity }}</p>
+    <p><strong>Período Orbital:</strong> {{ body.orbital_period }}</p>
+    <p><strong>População:</strong> {{ body.population }}</p>
+    <p><strong>Período rotacional:</strong> {{ body.rotation_period }}</p>
+    <p><strong>Água da superfície:</strong> {{ body.surface_water }}</p>
+    <p><strong>Terreno:</strong> {{ body.terrain }}</p>
+  </div>
+</div>
+
+<div *ngIf="tipo === 'nave'">
+  <img mat-card-image [attr.src]="body.img" alt="body.title" />
+  <div class="descricao">
+    <div class="tag">
+      <span class="diretor"> {{ body.director }} </span>
+    </div>
+    <h1>
+      {{ body.title }}
+    </h1>
+    <p><strong>Diretor:</strong> {{ body.director }}</p>
+    <p><strong>Produção:</strong> {{ body.producer }}</p>
+    <p><strong>Episódio:</strong> {{ body.episode_id }}</p>
+    <p><strong>Lançamento:</strong> {{ body.release_date }}</p>
+    <p><strong>Sinopse:</strong> {{ body.opening_crawl }}</p>
+  </div>
+</div>
