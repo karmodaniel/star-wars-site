@@ -26,6 +26,7 @@ export class FilmesComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    window.scroll(0, 0);
     this.fetchDataFilmes();
   }
 
