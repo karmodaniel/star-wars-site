@@ -13,7 +13,8 @@ export class PersonagensComponent implements OnInit {
     private apiStarWars: ApiStarWarsService,
     public dialog: MatDialog
   ) {}
-
+  
+  buscarPersonagens: any;
   personagens: Array<any> = new Array();
   destaques: Array<any> = new Array();
   isActivate = false;
@@ -55,7 +56,6 @@ export class PersonagensComponent implements OnInit {
         this.personagens = personagem.results;
         this.addNoPersonagem();
         this.persongensDestaque();
-        console.log(this.personagens);
       },
       (err) => {
         console.log('Erro ao listar os personagens.', err);
@@ -85,5 +85,16 @@ export class PersonagensComponent implements OnInit {
         body: personagem,
       },
     });
+  }
+
+  buscarPers() {
+    if(this.buscarPersonagens != "") {
+      this.personagens = this.personagens.filter(res => {
+        console.log(res.name.toLocaleLowerCase().match(this.buscarPersonagens.toLocaleLowerCase()));
+        return (res.name.toLocaleLowerCase().match(this.buscarPersonagens.toLocaleLowerCase()));
+      })    
+    }else if (this.buscarPersonagens == ""){
+      this.ngOnInit();
+    }
   }
 }
