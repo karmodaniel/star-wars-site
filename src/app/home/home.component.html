@@ -125,7 +125,7 @@
     <mat-tab-group mat-align-tabs="start" class="flex-item-12">
       <mat-tab label="REBELIÃO">
         <div class="naves-content">
-          <span class="nave">
+          <span class="nave nave-1">
             <img src="../../assets/home/x-wing.png" alt="Nave X-Windg" />
           </span>
           <div class="info">
@@ -152,7 +152,7 @@
 
       <mat-tab label="IMPÉRIO">
         <div class="naves-content">
-          <span class="nave">
+          <span class="nave nave-2">
             <img src="../../assets/home/star-destryer-card.png" alt="Nave Star Destroyer" />
           </span>
           <div class="info">
@@ -175,13 +175,13 @@
       </mat-tab>
       <mat-tab label="NAVES NEUTRAS">
         <div class="naves-content">
-          <span class="nave">
+          <span class="nave nave-3">
             <img
               src="../../assets/home/corvette-card.png"
               alt="Nave CR-90 Corvette"
             />
           </span>
-          <div class="info">
+          <div class="info info-nave-3">
             <h2>CR-90 Corvette</h2>
 
             <p>
@@ -191,6 +191,13 @@
               Galáctico, apesar de não terem sido projetadas como uma nave
               voltada para o combate.
             </p>
+
+            <div class="info-mais">
+              <a routerLink="/naves">
+                <p>VER MAIS</p>
+                <mat-icon>keyboard_arrow_right</mat-icon>
+              </a>
+            </div>
           </div>
         </div>
       </mat-tab>
@@ -204,7 +211,7 @@
   <div class="filmes-title">
     <img src="../../assets/home/filmes-anuncio.png" alt="" />
   </div>
-  <div class="container">
+  <div class="container container-filmes">
     <mat-card class="posters">
       <mat-card class="card-filme">
         <img
@@ -273,5 +280,8 @@
         </mat-card-content>
       </mat-card>
     </mat-card>
+    </div>
+    <div  class="sec-filmes">
+    <a class="call" routerLink="/filmes">Ver mais</a>
   </div>
-</section>
+  </section>
