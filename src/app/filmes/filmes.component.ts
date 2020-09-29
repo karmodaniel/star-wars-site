@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiStarWarsService } from '../api-star-wars.service';
 import { DetalhesDialogComponent } from '../detalhes-dialog/detalhes-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import { ErrosComponent } from '../erros/erros.component';
 
 @Component({
   selector: 'app-filmes',
@@ -23,7 +24,8 @@ export class FilmesComponent implements OnInit {
 
   constructor(
     private apiStarWars: ApiStarWarsService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public errorMsg:  ErrosComponent
   ) {}
 
   ngOnInit() {
@@ -43,6 +45,7 @@ export class FilmesComponent implements OnInit {
         this.triologiaPrequels();
       },
       (err) => {
+        this.errorMsg.openMensagemErro();
         console.log('Erro ao listar os personagens.', err);
       }
     );

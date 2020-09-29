@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiStarWarsService } from '../api-star-wars.service';
 import { DetalhesDialogComponent } from '../detalhes-dialog/detalhes-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import { ErrosComponent } from '../erros/erros.component';
 
 @Component({
   selector: 'app-naves',
@@ -26,7 +27,8 @@ export class NavesComponent implements OnInit {
 
   constructor(
     private apiStarWars: ApiStarWarsService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public errorMsg:  ErrosComponent
   ) {}
 
   ngOnInit() {
@@ -42,6 +44,7 @@ export class NavesComponent implements OnInit {
       },
       (err) => {
         console.log('Erro ao listar os personagens.', err);
+        this.errorMsg.openMensagemErro();
       }
     );
   }

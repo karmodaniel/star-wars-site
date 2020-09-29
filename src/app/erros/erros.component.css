@@ -1,0 +1,19 @@
+.campo {
+  display: flex;
+}
+
+.erro-mensagem {
+  color: #fff;
+  margin-left: 50px;
+}
+
+.erro-btn {
+  background-color: transparent;
+  border: none;
+  padding: 10px 0 10px 20px;
+  outline: none;
+}
+
+.erro-btn:hover {
+  cursor: pointer;
+}

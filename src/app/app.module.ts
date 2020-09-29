@@ -20,12 +20,15 @@ import { PlanetasComponent } from './planetas/planetas.component';
 import { NavesComponent } from './naves/naves.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 import {
   NgxUiLoaderModule,
   NgxUiLoaderConfig,
   NgxUiLoaderHttpModule,
 } from 'ngx-ui-loader';
+import { ErrosComponent } from './erros/erros.component';
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   fgsColor: "rgba(255,255,255,0)",
@@ -45,6 +48,7 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
     FilmesComponent,
     PlanetasComponent,
     NavesComponent,
+    ErrosComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,9 +65,10 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
     NgxUiLoaderHttpModule.forRoot({ showForeground: true }),
     MatToolbarModule,
-    FormsModule
+    FormsModule,
+    MatSnackBarModule
   ],
-  providers: [ApiStarWarsService, HttpClientModule],
+  providers: [ApiStarWarsService, HttpClientModule, ErrosComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

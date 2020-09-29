@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiStarWarsService } from '../api-star-wars.service';
 import { MatDialog } from '@angular/material/dialog';
 import { DetalhesDialogComponent } from '../detalhes-dialog/detalhes-dialog.component';
+import { ErrosComponent } from '../erros/erros.component';
 
 @Component({
   selector: 'app-personagens',
@@ -11,7 +12,8 @@ import { DetalhesDialogComponent } from '../detalhes-dialog/detalhes-dialog.comp
 export class PersonagensComponent implements OnInit {
   constructor(
     private apiStarWars: ApiStarWarsService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public errorMsg:  ErrosComponent
   ) {}
   
   buscarPersonagens: any;
@@ -58,6 +60,7 @@ export class PersonagensComponent implements OnInit {
         this.persongensDestaque();
       },
       (err) => {
+        this.errorMsg.openMensagemErro();
         console.log('Erro ao listar os personagens.', err);
       }
     );

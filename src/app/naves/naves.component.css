@@ -197,11 +197,10 @@
 }
 
 .form-naves {
-  align-self: flex-start;
+  align-self: center;
 }
-
 .form-naves .mat-form-field {
-  width: 380px;
+  width: 100%;
 }
 
 .itens {
@@ -259,6 +258,14 @@
 @media (max-width: 787px) {
   .lista-naves-titulo {
     max-width: 100%;
+  }
+
+  .form-naves {
+    align-self: flex-start;
+  }
+  
+  .form-naves .mat-form-field {
+    width: 380px;
   }
 
   .itens {
