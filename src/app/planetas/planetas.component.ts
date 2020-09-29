@@ -22,6 +22,7 @@ export class PlanetasComponent implements OnInit {
     '../../assets/planetas/coruscant.png',
     '../../assets/planetas/kamino.png',
   ];
+  buscarPlanetas: any;
 
   constructor(
     private apiStarWars: ApiStarWarsService,
@@ -42,7 +43,6 @@ export class PlanetasComponent implements OnInit {
           planet.img = this.imagens[cont];
           cont++;
         }
-        console.log(this.planets);
       },
       (err) => {
         console.log('Erro ao listar os personagens.', err);
@@ -57,5 +57,16 @@ export class PlanetasComponent implements OnInit {
         body: planeta,
       },
     });
+  }
+
+  buscarPlan() {
+    if(this.buscarPlanetas != "") {
+      this.planets = this.planets.filter(res => {
+        console.log(res.name.toLocaleLowerCase().match(this.buscarPlanetas.toLocaleLowerCase()));
+        return (res.name.toLocaleLowerCase().match(this.buscarPlanetas.toLocaleLowerCase()));
+      })    
+    }else if (this.buscarPlanetas == ""){
+      this.ngOnInit();
+    }
   }
 }
