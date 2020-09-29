@@ -163,6 +163,7 @@
     margin-left: 37%;
     position: relative;
     top: 12px;
+    outline: none;
   }
   
   .toolbar-icon:hover, .toolbar-logo:hover {
