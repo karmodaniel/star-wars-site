@@ -41,7 +41,6 @@ export class FilmesComponent implements OnInit {
           cont++;
         }
         this.triologiaPrequels();
-        console.log(this.filmes);
       },
       (err) => {
         console.log('Erro ao listar os personagens.', err);
@@ -69,16 +68,12 @@ export class FilmesComponent implements OnInit {
   }
 
   buscarFilme() {
-    if (this.buscar != '') {
-      this.filmes = this.filmes.filter((res) => {
-        console.log(
-          res.title.toLocaleLowerCase().match(this.buscar.toLocaleLowerCase())
-        );
-        return res.title
-          .toLocaleLowerCase()
-          .match(this.buscar.toLocaleLowerCase());
-      });
-    } else if (this.buscar == '') {
+    if(this.buscar != "") {
+      this.filmes = this.filmes.filter(res => {
+        console.log(res.title.toLocaleLowerCase().match(this.buscar.toLocaleLowerCase()));
+        return (res.title.toLocaleLowerCase().match(this.buscar.toLocaleLowerCase()));
+      })    
+    }else if (this.buscar == ""){
       this.ngOnInit();
     }
   }
