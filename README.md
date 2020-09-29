@@ -6,19 +6,30 @@
 
 ## Try it yourself
 
+First, you need to have [Node.js](https://nodejs.org.com) and [Angular CLI](https://github.com/angular/angular-cli) installed.
 
-First, you need to have [Node.js]('https://nodejs.org.com') and [Angular CLI](https://github.com/angular/angular-cli) installed.
+Run `npm i` to install the project dependencies.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## 🚀 Development tools 
+## 🚀 Development tools
 
 - ANGULAR version 10.1.2
 - HTML
 - CSS
 - TYPESCRIPT
 
- ## Author
+## 🚀 Design tools
+
+- FIGMA
+
+## Design
+
+<img alt="Design do site Star Wars Forever " src="src/assets/git-hub/design-star-wars-forever.png">
+
+</br>
+
+## Author
 
 👤 **Daniel Araújo**
 
