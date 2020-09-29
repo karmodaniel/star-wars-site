@@ -1,3 +1,38 @@
+
+/* BG-FILMES */
+.bg-filmes {
+  background: url("../../assets/filmes/bg-filmes-pg.jpg") no-repeat center;
+  background-size: cover;
+  max-width: 100%;
+  height: 570px;
+  margin-top: 169px;
+}
+
+.info {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.info h1 {
+  font-size: 3em;
+  font-weight: bold;
+  padding: 180px 0 0 0;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.info p {
+  font-size: 1.5em;
+  font-weight: lighter;
+  color: #fff;
+}
+
+@media (max-width: 787px) {
+  .bg-filmes {
+    margin-top: 70px;
+  }
+}
+
 /* TRIOLOGIA PREQUELS */
 .prequels {
   background: url("../../assets/filmes/bg-prequels.jpg") no-repeat center;
@@ -38,6 +73,16 @@
   letter-spacing: 1px;
 }
 
+@media (max-width: 787px) {
+  .posters {
+    max-width: 400px;
+  }
+  .card-prequels {
+    margin: 0px auto;
+    float: none;
+  }
+}
+
 @media (min-width: 788px) and (max-width: 1249px) {
   .posters {
     max-width: 800px;
@@ -47,46 +92,12 @@
   }
 }
 
-/* BG-FILMES */
-.bg-filmes {
-  background: url("../../assets/filmes/bg-filmes-pg.jpg") no-repeat center;
-  background-size: cover;
-  max-width: 100%;
-  height: 570px;
-  margin-top: 169px;
-}
-
-.info {
-  margin: 0 auto;
-  text-align: center;
-}
-
-.info h1 {
-  font-size: 3em;
-  font-weight: bold;
-  padding: 180px 0 0 0;
-  color: #fff;
-  margin-bottom: 30px;
-}
-
-.info p {
-  font-size: 1.5em;
-  font-weight: lighter;
-  color: #fff;
-}
-
-@media (max-width: 787px) {
-  .bg-filmes {
-    margin-top: 380px;
-  }
-}
-
 /* FILMES */
 .filmes {
   background: #f2f2f2;
 }
 
-.filmes h1 {
+.lista-filmes-titulo h1 {
   padding: 80px 0px;
   font-weight: 600;
   font-size: 2.62em;
@@ -100,11 +111,11 @@
   margin-top: 20px;
 }
 
-.mat-divider {
+.form {
   align-self: center;
-  margin-top: 25px;
-  justify-content: right;
-  background-color: #c4c4c4;
+}
+.form .mat-form-field{
+  width: 100%;
 }
 
 .itens {
@@ -150,13 +161,35 @@
 
 @media (min-width: 788px) and (max-width: 1249px) {
   .itens {
-    justify-content: center;
+    display: block;
+    float: left;
+    margin: 0 auto;
+  }
+
+  .card {
+    float: left;
+    margin-left: 60px;
   }
 }
 
 @media (max-width: 787px) {
+  .lista-filmes-titulo h1 {
+    font-size: 2em;
+    
+    padding: 60px 0 40px 0;
+  }
+  
   .itens {
     flex-direction: column;
+  }
+
+  .form {
+    align-self: start;
+    flex: 0 0 1;
+    max-width: 400px;
+  }
+  .form .mat-form-field{
+    width: 380px;
   }
 
   .card {

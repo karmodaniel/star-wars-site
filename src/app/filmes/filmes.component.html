@@ -58,9 +58,15 @@
   <div class="container">
     <!-- TODOS OS FILME -->
     <div class="lista-filmes-titulo flex-item-8">
-      <h1>Lista de Filme Star Wars</h1>
+      <h1>Lista de Filmes Star Wars</h1>
     </div>
-    <mat-divider class="flex-item-4"></mat-divider>
+    
+    <form class="form flex-item-4">
+      <mat-form-field>
+        <mat-label>Filmes</mat-label>
+        <input  [(ngModel)]="buscar" (input)="buscarFilme()" matInput placeholder="Buscar filme" name="filme">
+      </mat-form-field>
+    </form>
 
     <div class="itens">
       <mat-card

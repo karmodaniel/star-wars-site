@@ -11,6 +11,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class FilmesComponent implements OnInit {
   filmes: Array<any> = new Array();
   prequels: Array<any> = new Array();
+  buscar: any;
   imagens = [
     '../../assets/filmes/uma-nova-esperanca.jpg',
     '../../assets/filmes/imperio-contra-ataca.jpg',
@@ -65,5 +66,20 @@ export class FilmesComponent implements OnInit {
         body: filme,
       },
     });
+  }
+
+  buscarFilme() {
+    if (this.buscar != '') {
+      this.filmes = this.filmes.filter((res) => {
+        console.log(
+          res.title.toLocaleLowerCase().match(this.buscar.toLocaleLowerCase())
+        );
+        return res.title
+          .toLocaleLowerCase()
+          .match(this.buscar.toLocaleLowerCase());
+      });
+    } else if (this.buscar == '') {
+      this.ngOnInit();
+    }
   }
 }

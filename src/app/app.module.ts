@@ -19,6 +19,8 @@ import { FilmesComponent } from './filmes/filmes.component';
 import { PlanetasComponent } from './planetas/planetas.component';
 import { NavesComponent } from './naves/naves.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { FormsModule } from '@angular/forms';
+
 import {
   NgxUiLoaderModule,
   NgxUiLoaderConfig,
@@ -58,7 +60,8 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
     MatDividerModule,
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
     NgxUiLoaderHttpModule.forRoot({ showForeground: true }),
-    MatToolbarModule
+    MatToolbarModule,
+    FormsModule
   ],
   providers: [ApiStarWarsService, HttpClientModule],
   bootstrap: [AppComponent],
