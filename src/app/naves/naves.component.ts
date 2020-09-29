@@ -67,7 +67,6 @@ export class NavesComponent implements OnInit {
   buscarEspacoNaves() {
     if(this.buscarNaves != "") {
       this.naves = this.naves.filter(res => {
-        console.log(res.name.toLocaleLowerCase().match(this.buscarNaves.toLocaleLowerCase()));
         return (res.name.toLocaleLowerCase().match(this.buscarNaves.toLocaleLowerCase()));
       })    
     }else if (this.buscarNaves == ""){

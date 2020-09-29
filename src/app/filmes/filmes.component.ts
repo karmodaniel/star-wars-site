@@ -70,7 +70,6 @@ export class FilmesComponent implements OnInit {
   buscarFilme() {
     if(this.buscar != "") {
       this.filmes = this.filmes.filter(res => {
-        console.log(res.title.toLocaleLowerCase().match(this.buscar.toLocaleLowerCase()));
         return (res.title.toLocaleLowerCase().match(this.buscar.toLocaleLowerCase()));
       })    
     }else if (this.buscar == ""){

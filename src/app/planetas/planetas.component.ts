@@ -62,7 +62,6 @@ export class PlanetasComponent implements OnInit {
   buscarPlan() {
     if(this.buscarPlanetas != "") {
       this.planets = this.planets.filter(res => {
-        console.log(res.name.toLocaleLowerCase().match(this.buscarPlanetas.toLocaleLowerCase()));
         return (res.name.toLocaleLowerCase().match(this.buscarPlanetas.toLocaleLowerCase()));
       })    
     }else if (this.buscarPlanetas == ""){

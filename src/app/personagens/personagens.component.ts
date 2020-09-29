@@ -90,7 +90,6 @@ export class PersonagensComponent implements OnInit {
   buscarPers() {
     if(this.buscarPersonagens != "") {
       this.personagens = this.personagens.filter(res => {
-        console.log(res.name.toLocaleLowerCase().match(this.buscarPersonagens.toLocaleLowerCase()));
         return (res.name.toLocaleLowerCase().match(this.buscarPersonagens.toLocaleLowerCase()));
       })    
     }else if (this.buscarPersonagens == ""){
