@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiStarWarsService } from '../api-star-wars.service';
 import { DetalhesDialogComponent } from '../detalhes-dialog/detalhes-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import { ErrosComponent } from '../erros/erros.component';
 
 @Component({
   selector: 'app-naves',
@@ -22,10 +23,12 @@ export class NavesComponent implements OnInit {
     '../../assets/naves/executor.png',
     '../../assets/naves/rebel-transport.png',
   ];
+  buscarNaves: any;
 
   constructor(
     private apiStarWars: ApiStarWarsService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public errorMsg:  ErrosComponent
   ) {}
 
   ngOnInit() {
@@ -41,6 +44,7 @@ export class NavesComponent implements OnInit {
       },
       (err) => {
         console.log('Erro ao listar os personagens.', err);
+        this.errorMsg.openMensagemErro();
       }
     );
   }
@@ -51,7 +55,6 @@ export class NavesComponent implements OnInit {
       ship.img = this.imagens[cont];
       cont++;
     }
-    console.log(this.naves);
   }
 
   showDetails(plan) {
@@ -62,5 +65,15 @@ export class NavesComponent implements OnInit {
         body: plan,
       },
     });
+  }
+
+  buscarEspacoNaves() {
+    if(this.buscarNaves != "") {
+      this.naves = this.naves.filter(res => {
+        return (res.name.toLocaleLowerCase().match(this.buscarNaves.toLocaleLowerCase()));
+      })    
+    }else if (this.buscarNaves == ""){
+      this.ngOnInit();
+    }
   }
 }

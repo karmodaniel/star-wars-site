@@ -14,7 +14,7 @@
   <div class="container">
     <mat-tab-group mat-align-tabs="start" class="flex-item-12">
       <mat-tab label="REBELIÃO">
-        <div class="naves-content">
+        <div class="naves-content nave-1">
           <span class="nave">
             <img src="../../assets/home/x-wing.png" alt="Nave X-Windg" />
           </span>
@@ -35,7 +35,7 @@
 
       <mat-tab label="IMPÉRIO">
         <div class="naves-content">
-          <span class="nave">
+          <span class="nave nave-2">
             <img
               src="../../assets/naves/star-destryer-card.png"
               alt="Nave X-Windg"
@@ -54,13 +54,13 @@
       </mat-tab>
       <mat-tab label="NAVES NEUTRAS">
         <div class="naves-content">
-          <span class="nave">
+          <span class="nave nave-3">
             <img
               src="../../assets/naves/corvette-card.png"
               alt="Nave X-Windg"
             />
           </span>
-          <div class="info">
+          <div class="info nave-3">
             <h2>CR-90 Corvette</h2>
 
             <p>
@@ -80,10 +80,24 @@
 <!-- TODOS AS NAVES -->
 <section class="todas-naves">
   <div class="container">
-    <div class="flex-item-8">
+    <div class="lista-naves-titulo flex-item-8">
       <h1>Lista de Naves Star Wars</h1>
     </div>
-    <mat-divider class="flex-item-4"></mat-divider>
+    
+    <form class="form-naves flex-item-4">
+      <mat-form-field>
+        <mat-label>Naves</mat-label>
+        <input
+          [(ngModel)]="buscarNaves"
+          (input)="buscarEspacoNaves()"
+          matInput
+          placeholder="Buscar naves"
+          name="naves"
+        />
+      </mat-form-field>
+    </form>
+
+
     <div class="itens">
       <mat-card
         *ngFor="let nav of naves"

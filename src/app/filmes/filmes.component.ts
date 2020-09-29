@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiStarWarsService } from '../api-star-wars.service';
 import { DetalhesDialogComponent } from '../detalhes-dialog/detalhes-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import { ErrosComponent } from '../erros/erros.component';
 
 @Component({
   selector: 'app-filmes',
@@ -11,6 +12,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class FilmesComponent implements OnInit {
   filmes: Array<any> = new Array();
   prequels: Array<any> = new Array();
+  buscar: any;
   imagens = [
     '../../assets/filmes/uma-nova-esperanca.jpg',
     '../../assets/filmes/imperio-contra-ataca.jpg',
@@ -22,7 +24,8 @@ export class FilmesComponent implements OnInit {
 
   constructor(
     private apiStarWars: ApiStarWarsService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public errorMsg:  ErrosComponent
   ) {}
 
   ngOnInit() {
@@ -40,9 +43,9 @@ export class FilmesComponent implements OnInit {
           cont++;
         }
         this.triologiaPrequels();
-        console.log(this.filmes);
       },
       (err) => {
+        this.errorMsg.openMensagemErro();
         console.log('Erro ao listar os personagens.', err);
       }
     );
@@ -65,5 +68,15 @@ export class FilmesComponent implements OnInit {
         body: filme,
       },
     });
+  }
+
+  buscarFilme() {
+    if(this.buscar != "") {
+      this.filmes = this.filmes.filter(res => {
+        return (res.title.toLocaleLowerCase().match(this.buscar.toLocaleLowerCase()));
+      })    
+    }else if (this.buscar == ""){
+      this.ngOnInit();
+    }
   }
 }

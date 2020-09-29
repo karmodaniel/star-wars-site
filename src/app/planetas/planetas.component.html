@@ -1,10 +1,11 @@
 <!--  BG-PLANETAS -->
-<section class="bg-planetas">
+<section class="bg-planetas-pg">
   <div class="container">
     <div class="info">
       <h1>Planetas</h1>
       <p>
-        Viage por este universo, explorando os planetas dessa galáxia tão distante
+        Viage por este universo, explorando os planetas dessa galáxia tão
+        distante
       </p>
     </div>
   </div>
@@ -46,7 +47,20 @@
     <div class="lista-planetas-titulo flex-item-8">
       <h1>Lista de Planetas Star Wars</h1>
     </div>
-    <mat-divider class="flex-item-4"></mat-divider>
+
+    <form class="form-planetas flex-item-4">
+      <mat-form-field>
+        <mat-label>Planetas</mat-label>
+        <input
+          [(ngModel)]="buscarPlanetas"
+          (input)="buscarPlan()"
+          matInput
+          placeholder="Buscar planetas"
+          name="planetas"
+        />
+      </mat-form-field>
+    </form>
+
     <div class="itens">
       <mat-card
         *ngFor="let plan of planets"
@@ -55,7 +69,6 @@
       >
         <img mat-card-image [attr.src]="plan.img" />
         <mat-card-content>
-          
           <div class="tags-planetas">
             <div>
               <span class="tag-clima"> {{ plan.climate }} </span>

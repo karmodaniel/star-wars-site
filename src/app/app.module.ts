@@ -18,6 +18,26 @@ import { MatDividerModule } from '@angular/material/divider';
 import { FilmesComponent } from './filmes/filmes.component';
 import { PlanetasComponent } from './planetas/planetas.component';
 import { NavesComponent } from './naves/naves.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { FormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
+
+import {
+  NgxUiLoaderModule,
+  NgxUiLoaderConfig,
+  NgxUiLoaderHttpModule,
+} from 'ngx-ui-loader';
+import { ErrosComponent } from './erros/erros.component';
+
+const ngxUiLoaderConfig: NgxUiLoaderConfig = {
+  fgsColor: "rgba(255,255,255,0)",
+  overlayColor: "rgba(255,255,255,0)",
+  pbColor: "#ffe800",
+  pbDirection: "ltr",
+  pbThickness: 5,
+  hasProgressBar: true,
+};
 
 @NgModule({
   declarations: [
@@ -28,6 +48,7 @@ import { NavesComponent } from './naves/naves.component';
     FilmesComponent,
     PlanetasComponent,
     NavesComponent,
+    ErrosComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,8 +62,13 @@ import { NavesComponent } from './naves/naves.component';
     HttpClientModule,
     MatDialogModule,
     MatDividerModule,
+    NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
+    NgxUiLoaderHttpModule.forRoot({ showForeground: true }),
+    MatToolbarModule,
+    FormsModule,
+    MatSnackBarModule
   ],
-  providers: [ApiStarWarsService, HttpClientModule],
+  providers: [ApiStarWarsService, HttpClientModule, ErrosComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiStarWarsService } from '../api-star-wars.service';
 import { DetalhesDialogComponent } from '../detalhes-dialog/detalhes-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import { ErrosComponent } from '../erros/erros.component';
 
 @Component({
   selector: 'app-planetas',
@@ -22,10 +23,12 @@ export class PlanetasComponent implements OnInit {
     '../../assets/planetas/coruscant.png',
     '../../assets/planetas/kamino.png',
   ];
+  buscarPlanetas: any;
 
   constructor(
     private apiStarWars: ApiStarWarsService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public errorMsg:  ErrosComponent
   ) {}
 
   ngOnInit() {
@@ -42,9 +45,9 @@ export class PlanetasComponent implements OnInit {
           planet.img = this.imagens[cont];
           cont++;
         }
-        console.log(this.planets);
       },
       (err) => {
+        this.errorMsg.openMensagemErro();
         console.log('Erro ao listar os personagens.', err);
       }
     );
@@ -57,5 +60,15 @@ export class PlanetasComponent implements OnInit {
         body: planeta,
       },
     });
+  }
+
+  buscarPlan() {
+    if(this.buscarPlanetas != "") {
+      this.planets = this.planets.filter(res => {
+        return (res.name.toLocaleLowerCase().match(this.buscarPlanetas.toLocaleLowerCase()));
+      })    
+    }else if (this.buscarPlanetas == ""){
+      this.ngOnInit();
+    }
   }
 }

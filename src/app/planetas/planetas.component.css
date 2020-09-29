@@ -1,5 +1,5 @@
 /* BG-PERSONAGENS */
-.bg-planetas {
+.bg-planetas-pg {
   background: url("../../assets/planetas/bg-planetas.jpg") no-repeat center;
   background-size: cover;
   max-width: 100%;
@@ -27,8 +27,8 @@
 }
 
 @media (max-width: 787px) {
-  .bg-personagens {
-    margin-top: 380px;
+  .bg-planetas-pg {
+    margin-top: 70px;
   }
 }
 
@@ -96,7 +96,7 @@
 
 }
 
-/* FILMES */
+/* TODOS OS PLANETAS */
 .planetas {
   background: #f2f2f2;
 }
@@ -115,11 +115,12 @@
   margin-top: 20px;
 }
 
-.mat-divider {
+.form-planetas {
   align-self: center;
-  margin-top: 25px;
-  justify-content: right;
-  background-color: #c4c4c4;
+}
+
+.form-planetas .mat-form-field {
+  width: 100%;
 }
 
 .itens {
@@ -188,10 +189,14 @@
     margin-bottom: 40px;
   }
 
-  .mat-divider {
-    display: none;
+  .form-planetas {
+    align-self: flex-start;
   }
-
+  
+  .form-planetas .mat-form-field {
+    width: 380px;
+  }
+  
   .lista-planetas-titulo {
     font-size: 1.2em;
     max-width: 100%;
