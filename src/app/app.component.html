@@ -1,3 +1,4 @@
+<!-- HEADER DESKTOP E TABLET -->
 <header class="header">
   <div class="container">
     <a href="#" class="header_logo flex-item-2">
@@ -17,7 +18,9 @@
               >Personagens</a
             >
           </li>
-          <li><a routerLink="planetas" routerLinkActive="active">Planetas</a></li>
+          <li>
+            <a routerLink="planetas" routerLinkActive="active">Planetas</a>
+          </li>
           <li><a routerLink="naves" routerLinkActive="active">Naves</a></li>
         </ul>
       </nav>
@@ -31,6 +34,39 @@
     </div>
   </div>
 </header>
+
+<!-- HEADER MOBILE -->
+<mat-toolbar class="toolbar">
+  <button (click)="abrirToolbar()" mat-icon-button class="toolbar-icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="toolbar-logo">
+    <img src="../assets/home/logo-mobile.png" alt="Star Wars Foverer" />
+  </span>
+  <span></span>
+  <div *ngIf="toolbarAberta">
+    <mat-toolbar-row (click)="fecharToolbarNav()" routerLink="home" routerLinkActive="active">
+      <span>HOME</span>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row (click)="fecharToolbarNav()" routerLink="filmes" routerLinkActive="active">
+      <span>FILMES</span>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row (click)="fecharToolbarNav()" routerLink="personagens" routerLinkActive="active">
+      <span>PERSONAGENS</span>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row (click)="fecharToolbarNav()" routerLink="planetas" routerLinkActive="active">
+      <span>PLANETAS</span>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row (click)="fecharToolbarNav()" routerLink="naves" routerLinkActive="active">
+      <span>NAVES</span>
+    </mat-toolbar-row>
+  </div>
+</mat-toolbar>
+
 <router-outlet></router-outlet>
 <ngx-ui-loader></ngx-ui-loader>
 <!-- FRASE -->
