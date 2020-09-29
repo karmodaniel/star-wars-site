@@ -22,6 +22,7 @@ export class NavesComponent implements OnInit {
     '../../assets/naves/executor.png',
     '../../assets/naves/rebel-transport.png',
   ];
+  buscarNaves: any;
 
   constructor(
     private apiStarWars: ApiStarWarsService,
@@ -51,7 +52,6 @@ export class NavesComponent implements OnInit {
       ship.img = this.imagens[cont];
       cont++;
     }
-    console.log(this.naves);
   }
 
   showDetails(plan) {
@@ -62,5 +62,16 @@ export class NavesComponent implements OnInit {
         body: plan,
       },
     });
+  }
+
+  buscarEspacoNaves() {
+    if(this.buscarNaves != "") {
+      this.naves = this.naves.filter(res => {
+        console.log(res.name.toLocaleLowerCase().match(this.buscarNaves.toLocaleLowerCase()));
+        return (res.name.toLocaleLowerCase().match(this.buscarNaves.toLocaleLowerCase()));
+      })    
+    }else if (this.buscarNaves == ""){
+      this.ngOnInit();
+    }
   }
 }
