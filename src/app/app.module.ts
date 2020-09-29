@@ -18,6 +18,20 @@ import { MatDividerModule } from '@angular/material/divider';
 import { FilmesComponent } from './filmes/filmes.component';
 import { PlanetasComponent } from './planetas/planetas.component';
 import { NavesComponent } from './naves/naves.component';
+import {
+  NgxUiLoaderModule,
+  NgxUiLoaderConfig,
+  NgxUiLoaderHttpModule,
+} from 'ngx-ui-loader';
+
+const ngxUiLoaderConfig: NgxUiLoaderConfig = {
+  fgsColor: "rgba(255,255,255,0)",
+  overlayColor: "rgba(255,255,255,0)",
+  pbColor: "#ffe800",
+  pbDirection: "ltr",
+  pbThickness: 5,
+  hasProgressBar: true,
+};
 
 @NgModule({
   declarations: [
@@ -41,6 +55,8 @@ import { NavesComponent } from './naves/naves.component';
     HttpClientModule,
     MatDialogModule,
     MatDividerModule,
+    NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
+    NgxUiLoaderHttpModule.forRoot({ showForeground: true }),
   ],
   providers: [ApiStarWarsService, HttpClientModule],
   bootstrap: [AppComponent],
