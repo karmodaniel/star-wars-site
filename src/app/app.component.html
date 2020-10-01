@@ -37,40 +37,72 @@
 
 <!-- HEADER MOBILE -->
 <mat-toolbar class="toolbar">
-  <button (click)="abrirToolbar()" mat-icon-button class="toolbar-icon">
+  <button
+    (click)="abrirToolbar()"
+    [ngClass]="toolbarAberta ? 'toolbar-btn-open ' : 'toolbar-btn-close'"
+    mat-icon-button
+    class="toolbar-icon"
+  >
     <mat-icon>menu</mat-icon>
   </button>
-  <span routerLink="home" class="toolbar-logo">
+
+  <span
+    routerLink="home"
+    [ngClass]="toolbarAberta ? 'toolbar-logo-open ' : 'toolbar-logo'"
+  >
     <img src="../assets/home/logo-mobile.png" alt="Star Wars Foverer" />
   </span>
+
   <span></span>
-  <div *ngIf="toolbarAberta">
-    <mat-toolbar-row (click)="fecharToolbarNav()" routerLink="home" routerLinkActive="active">
+
+  <div class="toolbar-nav" *ngIf="toolbarAberta">
+    <mat-toolbar-row
+      (click)="fecharToolbarNav()"
+      routerLink="home"
+      routerLinkActive="active"
+    >
       <span>HOME</span>
     </mat-toolbar-row>
 
-    <mat-toolbar-row (click)="fecharToolbarNav()" routerLink="filmes" routerLinkActive="active">
+    <mat-toolbar-row
+      (click)="fecharToolbarNav()"
+      routerLink="filmes"
+      routerLinkActive="active"
+    >
       <span>FILMES</span>
     </mat-toolbar-row>
 
-    <mat-toolbar-row (click)="fecharToolbarNav()" routerLink="personagens" routerLinkActive="active">
+    <mat-toolbar-row
+      (click)="fecharToolbarNav()"
+      routerLink="personagens"
+      routerLinkActive="active"
+    >
       <span>PERSONAGENS</span>
     </mat-toolbar-row>
 
-    <mat-toolbar-row (click)="fecharToolbarNav()" routerLink="planetas" routerLinkActive="active">
+    <mat-toolbar-row
+      (click)="fecharToolbarNav()"
+      routerLink="planetas"
+      routerLinkActive="active"
+    >
       <span>PLANETAS</span>
     </mat-toolbar-row>
 
-    <mat-toolbar-row (click)="fecharToolbarNav()" routerLink="naves" routerLinkActive="active">
+    <mat-toolbar-row
+      (click)="fecharToolbarNav()"
+      routerLink="naves"
+      routerLinkActive="active"
+    >
       <span>NAVES</span>
     </mat-toolbar-row>
   </div>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
+<!-- LOADING -->
 <ngx-ui-loader></ngx-ui-loader>
-<!-- FRASE -->
 
+<!-- SLOGAN -->
 <section class="container">
   <div class="slogan">
     <img
@@ -78,6 +110,7 @@
       alt="Frase May the force be always with you"
     />
   </div>
+
   <div class="slogan-mobile">
     <img
       src="../assets/home/slogan-mobile.png"
@@ -92,6 +125,7 @@
     <p class="flex-item-6">
       Todos os direitos reservados. Star Wars Forever 2020.
     </p>
+
     <div class="redes flex-item-3">
       <h3>Conheça nossas redes</h3>
       <ul>
@@ -100,20 +134,25 @@
             <img src="../assets/redes/twitter.png" alt="Twitter"
           /></a>
         </li>
+
         <li>
           <a href="https://www.facebook.com/StarWars" target="_blank">
             <img src="../assets/redes/facebook.png" alt="Facebook"
           /></a>
         </li>
+
         <li>
           <a href="https://www.instagram.com/starwars/" target="_blank">
             <img src="../assets/redes/instagram.png" alt="instagram"
           /></a>
         </li>
+        
       </ul>
     </div>
+
     <div class="estrela flex-item-3">
       <img src="../assets/home/estrela-da-morte.svg" alt="Estrela da morte" />
     </div>
+    
   </div>
 </footer>

@@ -95,7 +95,7 @@
 }
 
 .toolbar {
-  display: none;   
+  display: none;
 }
 
 .active {
@@ -149,10 +149,17 @@
 
   .toolbar-icon {
     color: #ffe81f;
-    padding-left: 38px;
-    background-color: #000000;
     border: none;
     outline: none;
+  }
+
+  .toolbar-btn-close {
+    background-color: #000;
+  }
+
+  .toolbar-btn-open {
+    background-color: #000;
+    margin-left: 15px;
   }
 
   .mat-icon {
@@ -160,31 +167,42 @@
   }
 
   .toolbar-logo {
+    width: 100%;
     margin-left: 37%;
     position: relative;
     top: 12px;
     outline: none;
   }
-  
-  .toolbar-icon:hover, .toolbar-logo:hover {
-    cursor: pointer;
-  }
-  
 
-  .mat-toolbar-row{
-    background-color: #000000;
-    color:  #ffe81f;
-    padding-left: 40px;
+  .toolbar-logo-open {
+    width: 100%;
+    margin-left: 34%;
+    position: relative;
+    top: 12px;
     outline: none;
   }
 
-  
+  .toolbar-icon:hover,
+  .toolbar-logo:hover {
+    cursor: pointer;
+  }
+
+  .toolbar-nav {
+    margin-top: 18px;
+  }
+
+  .mat-toolbar-row {
+    background-color: #000;
+    color: #ffe81f;
+    padding-left: 40px;
+    outline: none;
+    border: 1px solid #000;
+  }
 
   .mat-toolbar-row:hover {
     cursor: pointer;
     border: 1px solid #ffe81f;
   }
-
 }
 
 /* SLOGAN */
@@ -209,7 +227,8 @@
 
   .slogan-mobile {
     display: block;
-    padding: 40px 0;
+    padding: 42px 0 40px 0;
+    margin-left: -10px;
   }
 }
 
@@ -237,6 +256,7 @@
   align-self: center;
   padding: 0px 0 47px 0;
 }
+
 .redes h3 {
   font-size: 1.75em;
   color: #f4f4f4;
@@ -267,6 +287,7 @@
 @media (max-width: 787px) {
   .footer p {
     max-width: 100%;
+    font-size: 1.25em;
     align-self: center;
     margin: 50px 0px 10px 0px;
   }
@@ -280,6 +301,10 @@
     align-self: center;
     margin-left: 0px;
     margin-bottom: 10px;
+  }
+
+  .redes h3 {
+    font-size: 1.5em;
   }
 }
 

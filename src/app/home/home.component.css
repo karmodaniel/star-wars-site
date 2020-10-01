@@ -2,9 +2,14 @@
 .planetas {
   background: url("../../assets/home/bg-planetas-sec.jpg") no-repeat center;
   background-size: cover;
-  max-width: 100%;
+
   height: 570px;
   margin-top: 168px;
+}
+
+.planetas img {
+  max-width: 100%;
+  display: block;
 }
 
 .planeta-info {
@@ -12,7 +17,7 @@
   text-align: center;
 }
 
-.planetas h1 {
+.planeta-info h1 {
   font-size: 3em;
   font-weight: bold;
   padding: 80px 0 0 0;
@@ -20,7 +25,7 @@
   margin-bottom: 30px;
 }
 
-.planetas p {
+.planeta-info p {
   font-size: 1.5em;
   font-weight: lighter;
   line-height: 30px;
@@ -46,6 +51,19 @@
 @media (max-width: 787px) {
   .planetas {
     margin-top: 68px;
+  }
+
+  .planeta-info h1 {
+    font-size: 2.75em;
+    padding: 40px 0 0 0;
+  }
+
+  .planeta-info p {
+    font-size: 1.25em;
+  }
+
+  .call {
+    font-size: 1.25em;
   }
 }
 
@@ -127,7 +145,7 @@
 
 .call-to-action {
   margin: 0 auto;
-  padding: 80px 0 120px 0px;
+  padding: 60px 0 120px 0px;
 }
 
 .call-preto {
@@ -149,6 +167,25 @@
 }
 
 @media (max-width: 787px) {
+  .personagens h1 {
+    font-size: 2.75em;
+    margin-left: -10px;
+  }
+
+  .card .mat-card-title {
+    font-size: 1.5em;
+    margin-left: -15px;
+  }
+
+  .tags span {
+    font-size: 0.875;
+  }
+
+  .card p {
+    font-size: 0.75em;
+    line-height: 20px;
+  }
+
   .itens {
     flex-direction: column;
   }
@@ -205,7 +242,7 @@
 }
 
 .nave img {
-  max-width: 525px;
+  max-width: 100%;
 }
 
 .info {
@@ -253,38 +290,36 @@
 }
 
 @media (min-width: 788px) and (max-width: 1249px) {
-  
-.mat-tab-group {
-  margin-bottom: 200px;
-  height: auto;
-  max-width: 900px;
-}
+  .mat-tab-group {
+    margin-bottom: 200px;
+    height: auto;
+    max-width: 900px;
+  }
 
-.nave {
-  margin-left: 155px;
-  float: left;
-}
+  .nave {
+    margin-left: 155px;
+    float: left;
+  }
 
-.nave img {
-  max-width: 525px;
-}
+  .nave img {
+    max-width: 525px;
+  }
 
-.info {
-  background-color: #fff;
-  float: left;
-  margin: 0 0 0 100px;
-  max-width: 600px;
-  margin-bottom: 50px;
-}
-  
+  .info {
+    background-color: #fff;
+    float: left;
+    margin: 0 0 0 100px;
+    max-width: 600px;
+    margin-bottom: 50px;
+  }
 }
 
 @media (max-width: 787px) {
   .naves h1 {
     position: relative;
-    font-size: 1.75em;
-    top: -50px;
-    left: 0px;
+    font-size: 2.75em;
+    top: -67px;
+    left: -2px;
   }
 
   .badge {
@@ -300,37 +335,46 @@
     float: none;
   }
 
-  .nave.nave-2 img{
+  .nave.nave-2 img {
     margin: 20px 0 30px 0;
   }
 
   .nave.nave-3 img {
-    width: 320px;
+    width: 220px;
     margin: 20px 0 30px 0;
   }
 
   .nave img {
-    max-width: 380px;
+    max-width: 280px;
   }
 
   .info {
     float: none;
-    max-width: 350px;
-    margin: 0px 0px 0px 25px;
+    max-width: 300px;
+    margin: 0px 0px 0px 0px;
     margin-bottom: 40px;
+    background-color: #fafafa;
+    box-shadow: none;
   }
 
   .info h2 {
-    font-size: 1.75em;
+    font-size: 1.5em;
+    margin-left: 3px;
   }
 
   .info p {
-    font-size: 1.275em;
-    line-height: 25px;
+    font-size: 0.75em;
+    line-height: 20px;
+    margin-left: 3px;
+  }
+
+  .info-mais a p {
+    font-size: 1.25em;
+    margin-left: 3px;
   }
 
   .info.info-nave-3 {
-    max-width: 320px;
+    max-width: 220px;
   }
 
   .mat-tab-group {
@@ -339,7 +383,7 @@
     margin-bottom: 100px;
     margin-left: 0px;
     height: auto;
-    max-width: 480px;
+    max-width: 300px;
   }
 }
 
@@ -391,9 +435,9 @@
   letter-spacing: 1px;
 }
 
-  .sec-filmes {
-    text-align: center;
-    height: 100px;   
+.sec-filmes {
+  text-align: center;
+  height: 100px;
 }
 
 @media (min-width: 788px) and (max-width: 1249px) {
@@ -414,6 +458,6 @@
   }
 
   .card-filme {
-    margin-left: 40px;
+    margin-left: 0px;
   }
 }
