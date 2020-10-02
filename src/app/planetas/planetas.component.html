@@ -1,7 +1,7 @@
 <!--  BG-PLANETAS -->
 <section class="bg-planetas-pg">
   <div class="container">
-    <div class="info">
+    <div class="bg-planetas-pg-info">
       <h1>Planetas</h1>
       <p>
         Viage por este universo, explorando os planetas dessa galáxia tão
@@ -45,17 +45,17 @@
 <section class="planetas">
   <div class="container">
     <div class="lista-planetas-titulo flex-item-8">
-      <h1>Lista de Planetas Star Wars</h1>
+      <h1>Lista de Planetas</h1>
     </div>
 
     <form class="form-planetas flex-item-4">
       <mat-form-field>
-        <mat-label>Planetas</mat-label>
+        <mat-label>Buscar planetas</mat-label>
         <input
           [(ngModel)]="buscarPlanetas"
           (input)="buscarPlan()"
           matInput
-          placeholder="Buscar planetas"
+          placeholder="Digite o nome do planeta"
           name="planetas"
         />
       </mat-form-field>
