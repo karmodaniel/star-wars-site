@@ -224,11 +224,15 @@
   .slogan {
     display: none;
   }
-
+  
   .slogan-mobile {
     display: block;
     padding: 42px 0 40px 0;
     margin-left: -10px;
+  }
+
+  .slogan-mobile img {
+    max-width: 280px;
   }
 }
 

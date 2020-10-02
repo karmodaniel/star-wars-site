@@ -81,17 +81,17 @@
 <section class="todas-naves">
   <div class="container">
     <div class="lista-naves-titulo flex-item-8">
-      <h1>Lista de Naves Star Wars</h1>
+      <h1>Lista de Naves</h1>
     </div>
     
     <form class="form-naves flex-item-4">
       <mat-form-field>
-        <mat-label>Naves</mat-label>
+        <mat-label>Buscar naves</mat-label>
         <input
           [(ngModel)]="buscarNaves"
           (input)="buscarEspacoNaves()"
           matInput
-          placeholder="Buscar naves"
+          placeholder="Digite o nome da nave"
           name="naves"
         />
       </mat-form-field>
