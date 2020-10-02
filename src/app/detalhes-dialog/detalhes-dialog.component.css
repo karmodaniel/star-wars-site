@@ -34,3 +34,9 @@
 .dialog-content {
   background-color: #262626;
 }
+
+@media (max-width: 787px) {
+  .descricao {
+    width: 285px;
+  }
+}

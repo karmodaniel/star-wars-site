@@ -1,7 +1,7 @@
 <!--  BG-FILMES -->
 <section class="bg-filmes">
   <div class="container">
-    <div class="info">
+    <div class="bg-filmes-info">
       <h1>Filmes</h1>
       <p>Relembre os filmes que deram vida ao universo fantástico mais amado da cultura pop</p>
     </div>
@@ -58,13 +58,13 @@
   <div class="container">
     <!-- TODOS OS FILME -->
     <div class="lista-filmes-titulo flex-item-8">
-      <h1>Lista de Filmes Star Wars</h1>
+      <h1>Lista de Filmes</h1>
     </div>
     
     <form class="form flex-item-4">
       <mat-form-field>
-        <mat-label>Filmes</mat-label>
-        <input  [(ngModel)]="buscar" (input)="buscarFilme()" matInput placeholder="Buscar filme" name="filme">
+        <mat-label>Buscar filmes</mat-label>
+        <input  [(ngModel)]="buscar" (input)="buscarFilme()" matInput placeholder="Digite o nome do filme" name="filme">
       </mat-form-field>
     </form>
 
