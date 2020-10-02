@@ -96,7 +96,7 @@ flex-item-8,
 
 @media (max-width: 787px) {
   .container {
-    max-width: 400px;
+    max-width: 300px;
     flex-direction: column;
   }
 
@@ -109,5 +109,10 @@ flex-item-8,
   .flex-item-12 {
     align-self: flex-start;
     flex-wrap: wrap;
+  }
+
+  /* MAT-TAB */
+  .mat-tab-label .mat-tab-label-content {
+    font-size: 0.64em;
   }
 }

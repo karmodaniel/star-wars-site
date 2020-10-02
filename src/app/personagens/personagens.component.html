@@ -1,7 +1,7 @@
 <!--  BG-PERSONAGENS -->
 <section class="bg-personagens">
   <div class="container">
-    <div class="info">
+    <div class="bg-personagens-info">
       <h1>Personagens</h1>
       <p>Se junte aos personagens de Star Wars na maior biblioteca da galáxia!</p>
     </div>
@@ -15,6 +15,7 @@
     <div class="destaque">
       <h1>Personagens em Destaque</h1>
     </div>
+
     <div class="itens">
       <mat-card
         *ngFor="let personagem of destaques"
@@ -38,14 +39,14 @@
     </div>
 
     <!-- TODOS OS PERSONAGENS -->
-    <div class="lista-persoangens-titulo flex-item-8">
-      <h1>Lista de Personagens de Star Wars</h1>
+    <div class="lista-personagens-titulo flex-item-8">
+      <h1>Lista de Personagens</h1>
     </div>
     
     <form class="form-personagens flex-item-4">
       <mat-form-field>
-        <mat-label>Personagens</mat-label>
-        <input  [(ngModel)]="buscarPersonagens" (input)="buscarPers()" matInput placeholder="Buscar personagem" name="personagem">
+        <mat-label>Buscar personagens</mat-label>
+        <input  [(ngModel)]="buscarPersonagens" (input)="buscarPers()" matInput placeholder="Digite o nome do personagem" name="personagem">
       </mat-form-field>
     </form>
 
