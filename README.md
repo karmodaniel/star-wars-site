@@ -1,8 +1,12 @@
-# Welcome to Star Wars Foverer👋
+# Welcome to Star Wars Forever👋
 
 <img alt="Site Star Wars Forever" src="src/assets/git-hub/star-wars-site.gif">
 
 </br>
+
+## Demo
+
+[Star Wars Forever](https://star-wars-forever.herokuapp.com)
 
 ## Try it yourself
 
@@ -15,6 +19,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ## 🚀 Development tools
 
 - ANGULAR version 10.1.2
+- ANGULAR MATERIAL
 - HTML
 - CSS
 - TYPESCRIPT
